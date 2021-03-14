@@ -2,7 +2,7 @@ var insertButton = document.getElementById('insert')
 var container = document.getElementById('treeContainer')
 var svg = "http://www.w3.org/2000/svg";  
 
-for(var i = 0; i < 11; i++){
+for(var i = 0; i < 10; i++){
     console.log(i);
     var circle = document.createElementNS(svg, 'circle')
     var x = Math.floor(Math.random() * ((window.innerWidth-20) -20+1))+20
