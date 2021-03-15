@@ -19,7 +19,7 @@ function updateNode(color,index){
 }
 
 window.onload = function(){
-    createNode(50,50,0)
+    createNode(50,100,0)
     createNode(100,100,1)
 }
 
