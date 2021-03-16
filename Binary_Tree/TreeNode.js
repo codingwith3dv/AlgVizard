@@ -6,9 +6,9 @@ function TreeNode(dataIn, xin, yin) {
     this.y = yin;
 }
 
-TreeNode.prototype.addNode = async function(newNode) {
+TreeNode.prototype.addNode = function(newNode) {
     if (newNode.data < this.data) {
-        console.log('left');
+        //console.log('left');
         if (this.left == null) {
             this.left = newNode;
             this.left.x = this.x - 50;
@@ -17,7 +17,7 @@ TreeNode.prototype.addNode = async function(newNode) {
             this.left.addNode(newNode)
         }
     } else if (newNode.data >= this.data) {
-        console.log('right');
+        //console.log('right');
         if (this.right == null) {
             this.right = newNode;
             this.right.x = this.x + 50;
@@ -29,11 +29,15 @@ TreeNode.prototype.addNode = async function(newNode) {
 }
 
 TreeNode.prototype.visit = function(parentNode) {
-    drawNode(this.x, this.y, this.data) 
+    
     if (this.left != null) {
-        this.left.visit(parentNode);
+        this.left.visit(this);
     }
+    
     if (this.right != null) {
-        this.right.visit(parentNode);
+        this.right.visit(this);
     }
+    
+    connectNodes(this, parentNode)
+    drawNode(this.x, this.y, this.data)
 }
