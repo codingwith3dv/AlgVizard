@@ -47,12 +47,12 @@ var i = 0;
 insertButton.onclick = () => {
     i = parseInt(inputtext.value);
     tree.add(i);
-    tree.transverse();
     tree.update();
+    tree.transverse()
 }
 var k = 0
 for (var i = 0; i < 5; i++) {
-    tree.add(Math.floor(Math.random() * (98 - 5 + 1)) + 5)
+    //tree.add(Math.floor(Math.random() * (98 - 5 + 1)) + 5)
 }
 
 /*tree.add(15)
@@ -60,5 +60,5 @@ tree.add(25)
 tree.add(10)
 tree.add(7)*/
 
-tree.transverse()
 tree.update()
+tree.transverse()
