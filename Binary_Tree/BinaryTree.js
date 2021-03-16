@@ -14,5 +14,6 @@ BST.prototype.add = function(data){
 }
 
 BST.prototype.transverse = async function(){
-    await this.root.visit()
+    container.innerHTML = ''
+    await this.root.visit(this.root) 
 }
