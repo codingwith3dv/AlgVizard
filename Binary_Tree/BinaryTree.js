@@ -4,7 +4,7 @@ function BST(){
 
 BST.prototype.add = function(data){
     var node = new TreeNode(data);
-    if(this.root === null){
+    if(this.root == null){
         this.root = node;
         this.root.x = window.innerWidth/2;
         this.root.y = 50;
