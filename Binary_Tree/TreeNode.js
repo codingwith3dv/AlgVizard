@@ -54,5 +54,10 @@ TreeNode.prototype.getLevels = function(parent) {
 }
 
 TreeNode.prototype.updateTree = function(root, level, col) {
-
+    if(root === null) return;
+    
+    var realCol = col - Math.pow(2, level - 1) + 1;
+    var renameItLaterVar = (window.innerWidth / Math.pow(2, level - 1));
+    root.x = renameItLaterVar * (realCol - 1) + renameItLaterVar / 2;
+    root.y = window.innerHeight - (level * 30 - 30 / 2)
 }
