@@ -14,7 +14,7 @@ function drawNode(x, y, value) {
     circleArray[index].setAttributeNS(null, 'r', '20')
     circleArray[index].setAttributeNS(null, 'stroke', 'red')
     circleArray[index].setAttributeNS(null, 'fill', 'white')
-    
+
 
     textArray[index] = document.createElementNS(svg, 'text')
     textArray[index].setAttributeNS(null, 'x', x - 8)
@@ -37,20 +37,28 @@ function connectNodes(node1, node2) {
     lineArray[index].setAttributeNS(null, 'y2', node2.y)
     lineArray[index].setAttributeNS(null, 'stroke', 'red')
     lineArray[index].setAttributeNS(null, 'stroke-width', 3)
-    lineArray[index].style = 'z-index: -1;'
+    lineArray[index].style = 'z-index: 1;'
 
     container.appendChild(lineArray[index])
 }
 
 var tree = new BST();
-
-insertButton.addEventListener('click', () => {
-    var i = inputtext.value;
-    tree.add(i)
-    tree.transverse()
-})
+var i = 0;
+insertButton.onclick = () => {
+    i = parseInt(inputtext.value);
+    tree.add(i);
+    tree.transverse();
+    tree.update();
+}
 var k = 0
 for (var i = 0; i < 5; i++) {
     tree.add(Math.floor(Math.random() * (98 - 5 + 1)) + 5)
 }
+
+/*tree.add(15)
+tree.add(25)
+tree.add(10)
+tree.add(7)*/
+
 tree.transverse()
+tree.update()

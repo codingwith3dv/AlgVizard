@@ -1,19 +1,28 @@
-function BST(){
+function BST() {
     this.root = null;
 }
 
-BST.prototype.add = function(data){
+BST.prototype.add = function(data) {
     var node = new TreeNode(data);
-    if(this.root == null){
+    if (this.root == null) {
         this.root = node;
-        this.root.x = window.innerWidth/2;
+        this.root.x = window.innerWidth / 2;
         this.root.y = 50;
-    }else{
+    } else {
         this.root.addNode(node)
     }
+    
 }
 
-BST.prototype.transverse = async function(){
+BST.prototype.transverse = function() {
     container.innerHTML = ''
-    await this.root.visit(this.root) 
+    if (this.root == null) return;
+    this.root.visit(this.root)
+}
+
+BST.prototype.update = function() {
+    var levels = this.root.getLevels(this.root)
+    var levelHeight = window.innerHeight/levels;
+    
+    
 }
