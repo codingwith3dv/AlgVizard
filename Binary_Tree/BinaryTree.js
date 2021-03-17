@@ -4,6 +4,7 @@ function BST() {
 
 BST.prototype.add = function(data, conta) {
     var node = new TreeNode(data);
+    
     if (this.root == null) {
         this.root = node;
         this.root.x = document.innerWidth / 2;
@@ -15,7 +16,8 @@ BST.prototype.add = function(data, conta) {
 }
 
 BST.prototype.draw = function() {
-    //container.innerHTML = ''
+    container.innerHTML = ''
+    index = 0;
     if (this.root == null) return;
     this.root.drawNodes(this.root)
 }

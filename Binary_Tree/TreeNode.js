@@ -73,6 +73,9 @@ TreeNode.prototype.updateNode = function(root, level, col, levels, cont) {
                 (cont.clientHeight / levels) / 2) * 0.8
         ), 30);
     root.radius = Math.max(root.radius, 10);
+    
+    if(root.x < 0) root.x += 10;
+    else if (root.x > cont.clientWidth - root.radius) root.x -= 10;
 
     this.updateNode(root.left, level + 1, col << 1, levels, cont);
     this.updateNode(root.right, level + 1, (col << 1) | 1, levels, cont)
