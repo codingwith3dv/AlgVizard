@@ -15,7 +15,7 @@ BST.prototype.add = function(data, conta) {
 }
 
 BST.prototype.draw = function() {
-    container.innerHTML = ''
+    //container.innerHTML = ''
     if (this.root == null) return;
     this.root.drawNodes(this.root)
 }
