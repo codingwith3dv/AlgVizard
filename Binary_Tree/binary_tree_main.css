@@ -59,6 +59,8 @@ input[type=number]:focus{
 
 #treeContainer{
     width: 100%;
+    padding: 0px;
+    box-sizing: border-box;
     height: 500px;
     background-color: #E2E2E2;
 }
