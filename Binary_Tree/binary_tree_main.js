@@ -51,7 +51,7 @@ insertButton.onclick = () => {
         tree.update()
         tree.draw()
     }else{
-        alert('Null')
+        alert('Please enter some value')
     }
 }
 
@@ -62,7 +62,7 @@ deleteButton.onclick = () => {
         tree.update()
         tree.draw()
     }else{
-        alert('Null')
+        alert('Please enter some value')
     }
 }
 
