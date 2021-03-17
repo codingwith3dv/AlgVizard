@@ -14,10 +14,10 @@ BST.prototype.add = function(data) {
     this.update()
 }
 
-BST.prototype.transverse = function() {
+BST.prototype.draw = function() {
     container.innerHTML = ''
     if (this.root == null) return;
-    this.root.visit(this.root)
+    this.root.drawNodes(this.root)
 }
 
 BST.prototype.update = function() {

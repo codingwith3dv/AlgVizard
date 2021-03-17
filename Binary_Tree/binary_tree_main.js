@@ -14,7 +14,7 @@ function drawNode(x, y, value, r) {
     circleArray[index].setAttributeNS(null, 'r', r)
     circleArray[index].setAttributeNS(null, 'stroke', 'red')
     circleArray[index].setAttributeNS(null, 'fill', 'white')
-    circleArray[index].setAttributeNS(null, 'transition', '0.9s all ease-in-out')
+    circleArray[index].style.transition = '0.5s ease-in-out'
 
     textArray[index] = document.createElementNS(svg, 'text')
     textArray[index].setAttributeNS(null, 'x', x - 8)
@@ -27,6 +27,8 @@ function drawNode(x, y, value, r) {
 
     container.appendChild(circleArray[index])
     container.appendChild(textArray[index])
+    
+    console.log(circleArray[index].className.baseVal);
 }
 
 function connectNodes(node1, node2) {
@@ -49,7 +51,7 @@ insertButton.onclick = () => {
     if (inputtext.value){
         tree.add(i);
         tree.update();
-        tree.transverse()
+        tree.draw()
     }else{
         alert('Null')
     }
@@ -65,4 +67,4 @@ tree.add(10)
 tree.add(7)*/
 
 tree.update()
-tree.transverse()
+tree.draw()

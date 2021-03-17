@@ -33,14 +33,14 @@ TreeNode.prototype.addNode = function(newNode) {
 
 }
 
-TreeNode.prototype.visit = function(parentNode) {
+TreeNode.prototype.drawNodes = function(parentNode) {
 
     if (this.left != null) {
-        this.left.visit(this);
+        this.left.drawNodes(this);
     }
 
     if (this.right != null) {
-        this.right.visit(this);
+        this.right.drawNodes(this);
     }
 
     connectNodes(this, parentNode)
@@ -57,12 +57,12 @@ TreeNode.prototype.getLevels = function(parent) {
 TreeNode.prototype.updateNode = function(root, level, col, levels) {
     if (root === null) return;
     
-    var levelHeight = window.innerHeight / levels ;
+    var levelHeight = window.innerHeight / levels - 50;
     
     var realCol = col - Math.pow(2, level - 1) + 1;
     var renameItLaterVar = (window.innerWidth / Math.pow(2, level - 1));
     root.x = renameItLaterVar * (realCol - 1) + renameItLaterVar / 2;
-    root.y = 50 + (level * levelHeight - levelHeight / 2)
+    root.y = 0 + (level * levelHeight - levelHeight / 2)
 
     root.radius = Math.min(
 		Math.min(
