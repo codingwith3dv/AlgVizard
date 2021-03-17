@@ -23,7 +23,6 @@ BST.prototype.transverse = function() {
 BST.prototype.update = function() {
     if(this.root === null)return;
     var levels = this.root.getLevels(this.root)
-    var levelHeight = (window.innerHeight/levels) - 50;
     
-    this.root.updateTree(this.root, 1,1, levelHeight)
+    this.root.updateTree(this.root, 1,1, levels)
 }

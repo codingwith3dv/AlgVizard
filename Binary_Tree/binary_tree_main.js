@@ -7,14 +7,14 @@ var circleArray = []
 var textArray = []
 var lineArray = []
 
-function drawNode(x, y, value) {
+function drawNode(x, y, value, r) {
     circleArray[index] = document.createElementNS(svg, 'circle')
     circleArray[index].setAttributeNS(null, 'cx', x)
     circleArray[index].setAttributeNS(null, 'cy', y)
-    circleArray[index].setAttributeNS(null, 'r', '20')
+    circleArray[index].setAttributeNS(null, 'r', r)
     circleArray[index].setAttributeNS(null, 'stroke', 'red')
     circleArray[index].setAttributeNS(null, 'fill', 'white')
-
+    circleArray[index].setAttributeNS(null, 'transition', '0.9s all ease-in-out')
 
     textArray[index] = document.createElementNS(svg, 'text')
     textArray[index].setAttributeNS(null, 'x', x - 8)
@@ -46,9 +46,13 @@ var tree = new BST();
 var i = 0;
 insertButton.onclick = () => {
     i = parseInt(inputtext.value);
-    tree.add(i);
-    tree.update();
-    tree.transverse()
+    if (inputtext.value){
+        tree.add(i);
+        tree.update();
+        tree.transverse()
+    }else{
+        alert('Null')
+    }
 }
 var k = 0
 for (var i = 0; i < 5; i++) {
