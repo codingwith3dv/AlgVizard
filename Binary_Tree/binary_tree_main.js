@@ -1,4 +1,5 @@
 var insertButton = document.getElementById('insert')
+var deleteButton = document.getElementById('delete')
 var inputtext = document.getElementById('inputnum')
 var container = document.getElementById('treeContainer')
 var svg = "http://www.w3.org/2000/svg";
@@ -14,7 +15,7 @@ function drawNode(x, y, value, r) {
     circleArray[index].setAttributeNS(null, 'r', r)
     circleArray[index].setAttributeNS(null, 'stroke', 'red')
     circleArray[index].setAttributeNS(null, 'fill', 'white')
-    circleArray[index].style.transition = '0.5s ease-in-out'
+    circleArray[index].setAttributeNS(null, 'class', 'node')
 
     textArray[index] = document.createElementNS(svg, 'text')
     textArray[index].setAttributeNS(null, 'x', x - 8)
@@ -27,8 +28,6 @@ function drawNode(x, y, value, r) {
 
     container.appendChild(circleArray[index])
     container.appendChild(textArray[index])
-    
-    console.log(circleArray[index].className.baseVal);
 }
 
 function connectNodes(node1, node2) {
@@ -43,28 +42,45 @@ function connectNodes(node1, node2) {
 
     container.appendChild(lineArray[index])
 }
-console.log(container.clientHeight);
 var tree = new BST();
 var i = 0;
 insertButton.onclick = () => {
     i = parseInt(inputtext.value);
     if (inputtext.value){
-        tree.add(i, container);
-        tree.update(container);
+        tree.add(i);
+        tree.update()
         tree.draw()
     }else{
         alert('Null')
     }
 }
+
+deleteButton.onclick = () => {
+    i = parseInt(inputtext.value);
+    if (inputtext.value){
+        tree.delete(i);
+        tree.update()
+        tree.draw()
+    }else{
+        alert('Null')
+    }
+}
+
 var k = 0
 for (var i = 0; i < 5; i++) {
     //tree.add(Math.floor(Math.random() * (98 - 5 + 1)) + 5)
 }
 
-/*tree.add(15)
+tree.add(15)
 tree.add(25)
 tree.add(10)
-tree.add(7)*/
+tree.add(7)
+tree.add(22)
+tree.add(17)
+tree.add(13)
+tree.add(5)
+tree.add(9)
+tree.add(27)
 
-tree.update(container)
+tree.update()
 tree.draw()

@@ -2,17 +2,21 @@ function BST() {
     this.root = null;
 }
 
-BST.prototype.add = function(data, conta) {
+BST.prototype.add = function(data) {
     var node = new TreeNode(data);
-    
+
     if (this.root == null) {
         this.root = node;
-        this.root.x = document.innerWidth / 2;
-        this.root.y = 50;
     } else {
         this.root.addNode(node)
     }
-    this.update(conta)
+    this.update()
+}
+
+BST.prototype.delete = function(data) {
+    if (this.root === null) return;
+    this.root = this.root.deleteNode(data);
+    this.update();
 }
 
 BST.prototype.draw = function() {
@@ -22,9 +26,9 @@ BST.prototype.draw = function() {
     this.root.drawNodes(this.root)
 }
 
-BST.prototype.update = function(conta) {
-    if(this.root === null)return;
+BST.prototype.update = function() {
+    if (this.root === null) return;
     var levels = this.root.getLevels(this.root)
-    
-    this.root.updateNode(this.root, 1,1, levels, conta)
+
+    this.root.updateNode(this.root, 1, 1, levels)
 }

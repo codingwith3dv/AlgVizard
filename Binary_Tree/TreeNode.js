@@ -33,6 +33,40 @@ TreeNode.prototype.addNode = function(newNode) {
 
 }
 
+TreeNode.prototype.deleteNode = function(val) {
+
+    if (val < this.data) {
+        this.left = this.left.deleteNode(val);
+        return this;
+    } else if (val > this.data) {
+        this.right = this.right.deleteNode(val);
+        return this;
+    } else {
+        
+        if(this.left === null && this.right === null){
+            var node = this;
+            node = null;
+            return node;
+        }
+        
+        if(this.left === null) return this.right;
+        if(this.right === null) return this.left;
+        
+        var p = this.right;
+        
+        while (p.left !== null) {
+            p = p.left;
+        }
+        
+        this.data = p.data;
+        this.right = this.right.deleteNode(p.data)
+        
+        return this;
+        
+    }
+
+}
+
 TreeNode.prototype.drawNodes = function(parentNode) {
 
     if (this.left != null) {
@@ -54,29 +88,38 @@ TreeNode.prototype.getLevels = function(parent) {
     return Math.max(this.getLevels(parent.left) + 1, this.getLevels(parent.right) + 1)
 }
 
-TreeNode.prototype.updateNode = function(root, level, col, levels, cont) {
+TreeNode.prototype.updateNode = function(root, level, col, levels) {
     if (root === null) return;
-    console.log(cont.clientHeight + '  ' + cont.clientWidth);
-    var levelHeight = cont.clientHeight / levels - 50;
+    console.log(container.clientHeight + '  ' + container.clientWidth);
+    var levelHeight = container.clientHeight / levels - 50;
 
     var realCol = col - Math.pow(2, level - 1) + 1;
-    var renameItLaterVar = (cont.clientWidth / Math.pow(2, level - 1));
+    var renameItLaterVar = (container.clientWidth / Math.pow(2, level - 1));
     root.x = renameItLaterVar * (realCol - 1) + renameItLaterVar / 2;
     root.y = 50 + (level * levelHeight - levelHeight / 2)
 
     root.radius = Math.min(
         Math.min(
             (
-                (cont.clientWidth / Math.pow(2, levels) * 1.0) / 2
+                (container.clientWidth / Math.pow(2, levels) * 1.0) / 2
             ) * 0.8,
             (
-                (cont.clientHeight / levels) / 2) * 0.8
+                (container.clientHeight / levels) / 2) * 0.8
         ), 30);
     root.radius = Math.max(root.radius, 10);
-    
-    if(root.x < 0) root.x += 10;
-    else if (root.x > cont.clientWidth - root.radius) root.x -= 10;
 
-    this.updateNode(root.left, level + 1, col << 1, levels, cont);
-    this.updateNode(root.right, level + 1, (col << 1) | 1, levels, cont)
+    if (root.x < 0) root.x += 10;
+    else if (root.x > container.clientWidth - root.radius) root.x -= 10;
+
+    this.updateNode(root.left, level + 1, col << 1, levels);
+    this.updateNode(root.right, level + 1, (col << 1) | 1, levels)
+}
+
+//Helper function 
+TreeNode.prototype.getLeastNode = function() {
+    if (this.left === null) {
+        return this;
+    } else {
+        return this.left.getLeastNode();
+    }
 }
