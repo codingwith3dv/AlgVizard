@@ -43,14 +43,14 @@ function connectNodes(node1, node2) {
 
     container.appendChild(lineArray[index])
 }
-
+console.log(container.clientHeight);
 var tree = new BST();
 var i = 0;
 insertButton.onclick = () => {
     i = parseInt(inputtext.value);
     if (inputtext.value){
-        tree.add(i);
-        tree.update();
+        tree.add(i, container);
+        tree.update(container);
         tree.draw()
     }else{
         alert('Null')
@@ -66,5 +66,5 @@ tree.add(25)
 tree.add(10)
 tree.add(7)*/
 
-tree.update()
+tree.update(container)
 tree.draw()

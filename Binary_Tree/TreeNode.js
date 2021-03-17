@@ -54,27 +54,27 @@ TreeNode.prototype.getLevels = function(parent) {
     return Math.max(this.getLevels(parent.left) + 1, this.getLevels(parent.right) + 1)
 }
 
-TreeNode.prototype.updateNode = function(root, level, col, levels) {
+TreeNode.prototype.updateNode = function(root, level, col, levels, cont) {
     if (root === null) return;
-    
-    var levelHeight = window.innerHeight / levels - 50;
+    console.log(cont.clientHeight + '  ' + cont.clientWidth);
+    var levelHeight = cont.clientHeight / levels - 50;
     
     var realCol = col - Math.pow(2, level - 1) + 1;
-    var renameItLaterVar = (window.innerWidth / Math.pow(2, level - 1));
+    var renameItLaterVar = (cont.clientWidth / Math.pow(2, level - 1));
     root.x = renameItLaterVar * (realCol - 1) + renameItLaterVar / 2;
-    root.y = 0 + (level * levelHeight - levelHeight / 2)
+    root.y = 50 + (level * levelHeight - levelHeight / 2)
 
     root.radius = Math.min(
 		Math.min(
 		    (
-		        (window.innerWidth / Math.pow(2, levels)*1.0) / 2
+		        (cont.clientWidth / Math.pow(2, levels)*1.0) / 2
 		    )*0.8, 
 		    (
-		        (window.innerHeight / levels) / 2)*0.8
+		        (cont.clientHeight / levels) / 2)*0.8
 		    )
 		, 30);
 	root.radius = Math.max(root.radius, 10);
 
-    this.updateNode(root.left, level + 1, col << 1, levels);
-    this.updateNode(root.right, level + 1, (col << 1) | 1, levels)
+    this.updateNode(root.left, level + 1, col << 1, levels, cont);
+    this.updateNode(root.right, level + 1, (col << 1) | 1, levels, cont)
 }
