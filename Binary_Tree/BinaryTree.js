@@ -24,5 +24,5 @@ BST.prototype.update = function() {
     if(this.root === null)return;
     var levels = this.root.getLevels(this.root)
     
-    this.root.updateTree(this.root, 1,1, levels)
+    this.root.updateNode(this.root, 1,1, levels)
 }
