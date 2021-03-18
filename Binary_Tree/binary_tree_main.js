@@ -84,6 +84,6 @@ tree.update()
 
 setInterval(() => {
     tree.draw()
-}, 1)
+}, 1000/60)
 
 //tree.draw()
