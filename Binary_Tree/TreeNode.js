@@ -70,13 +70,15 @@ TreeNode.prototype.deleteNode = function(val) {
 TreeNode.prototype.drawNodes = function(parentNode) {
 
     if (this.left != null) {
-        this.left.drawNodes(this);
+        window.requestAnimationFrame(() => { this.left.drawNodes(this) })
+        //this.left.drawNodes(this);
     }
-    
+
     if (this.right != null) {
-        this.right.drawNodes(this);
+        window.requestAnimationFrame(() => { this.right.drawNodes(this) })
+        //this.right.drawNodes(this);
     }
-    
+
     connectNodes(this, parentNode)
     drawNode(this.x, this.y, this.data, this.radius)
 
