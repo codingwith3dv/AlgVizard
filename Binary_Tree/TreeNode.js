@@ -4,12 +4,12 @@ function TreeNode(dataIn, xin, yin) {
     this.right = null;
     this.x = xin;
     this.y = yin;
-    this.currX = 0;
-    this.currY = 0;
+    this.currX = 100;
+    this.currY = 100;
     this.radius = 20;
 }
 
-var nodeSpeed = 8;
+var nodeSpeed = 5;
 var EP = 0.1;
 
 TreeNode.prototype.addNode = function(newNode) {

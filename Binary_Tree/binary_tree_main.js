@@ -41,7 +41,7 @@ function drawNode(node, node2) {
 }
 
 var tree = new BST();
-var i = 0;
+
 insertButton.onclick = () => {
     i = parseInt(inputtext.value);
     if (inputtext.value) {
@@ -63,10 +63,10 @@ deleteButton.onclick = () => {
 }
 
 for (var i = 0; i < 5; i++) {
-    //tree.add(Math.floor(Math.random() * (98 - 5 + 1)) + 5)
+    tree.add(Math.floor(Math.random() * (99 - 5 + 1)) + 5)
+    tree.update()
 }
 
-tree.update()
 setInterval( async () => {
     tree.draw()
 }, 1000/60)
