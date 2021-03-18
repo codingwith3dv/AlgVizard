@@ -10,13 +10,11 @@ BST.prototype.add = function(data) {
     } else {
         this.root.addNode(node)
     }
-    this.update()
 }
 
 BST.prototype.delete = function(data) {
     if (this.root === null) return;
     this.root = this.root.deleteNode(data);
-    this.update();
 }
 
 BST.prototype.draw = function() {

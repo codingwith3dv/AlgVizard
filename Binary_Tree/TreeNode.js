@@ -35,7 +35,6 @@ TreeNode.prototype.addNode = function(newNode) {
             this.right.addNode(newNode)
         }
     }
-
 }
 
 TreeNode.prototype.deleteNode = function(val) {
@@ -69,7 +68,6 @@ TreeNode.prototype.deleteNode = function(val) {
         return this;
 
     }
-
 }
 
 TreeNode.prototype.drawNodes = function(parentNode) {
