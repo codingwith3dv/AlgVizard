@@ -71,7 +71,7 @@ input[type=number]:focus {
 
 .node {
     display: block;
-    animation: circleFade 1s ease-in-out backwards; 
+    animation: circleFade 0s ease-in-out backwards; 
 }
 
 @keyframes circleFade {

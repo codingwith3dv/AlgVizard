@@ -4,8 +4,13 @@ function TreeNode(dataIn, xin, yin) {
     this.right = null;
     this.x = xin;
     this.y = yin;
+    this.currX = 0;
+    this.currY = 0;
     this.radius = 20;
 }
+
+var nodeSpeed = 8;
+var EP = 0.1;
 
 TreeNode.prototype.addNode = function(newNode) {
 
@@ -79,8 +84,8 @@ TreeNode.prototype.drawNodes = function(parentNode) {
         this.right.drawNodes(this);
     }
 
-    connectNodes(this, parentNode)
-    drawNode(this.x, this.y, this.data, this.radius)
+    //connectNodes(this, parentNode)
+    this.drawSelf(parentNode)
 
 }
 
@@ -93,7 +98,7 @@ TreeNode.prototype.getLevels = function(parent) {
 
 TreeNode.prototype.updateNode = function(root, level, col, levels) {
     if (root === null) return;
-    console.log(container.clientHeight + '  ' + container.clientWidth);
+    //console.log(container.clientHeight + '  ' + container.clientWidth);
     var levelHeight = container.clientHeight / levels - 50;
 
     var realCol = col - Math.pow(2, level - 1) + 1;
@@ -124,5 +129,64 @@ TreeNode.prototype.getLeastNode = function() {
         return this;
     } else {
         return this.left.getLeastNode();
+    }
+}
+
+TreeNode.prototype.drawSelf = function(parentNode) {
+    this.goToPos()
+    drawNode(this, parentNode)
+}
+
+TreeNode.prototype.goToPos = function() {
+    var y1 = this.currY;
+    var x1 = this.currX;
+    var dy = (this.y - this.currY);
+    var dx = (this.x - this.currX);
+    var slope = dy / dx;
+
+    if (Math.abs(dy) > nodeSpeed || Math.abs(dx) > nodeSpeed) {
+        if (Math.abs(dy) > Math.abs(dx)) {
+
+            if (this.y > this.currY)
+                this.currY += nodeSpeed;
+            else
+                this.currY -= nodeSpeed;
+
+            if (slope == 0) {
+                this.currX += nodeSpeed;
+            }
+            else
+                this.currX = (this.currY + slope * x1 - y1) / slope;
+
+            if (Math.abs(slope) < EP) {
+                if (this.x > this.currX)
+                    this.currX += nodeSpeed;
+                else
+                    this.currX -= nodeSpeed;
+            }
+            else {
+                this.currX = (this.currY + slope * x1 - y1) / slope;
+            }
+        }
+        else {
+            if (this.x > this.currX)
+                this.currX += nodeSpeed;
+            else
+                this.currX -= nodeSpeed;
+
+            if (Math.abs(slope) < EP) {
+                if (this.y > this.currY)
+                    this.currY += nodeSpeed;
+                else
+                    this.currY -= nodeSpeed;
+            }
+            else {
+                this.currY = (slope * this.currX - slope * x1 + y1);
+            }
+        }
+        return false;
+    }
+    else {
+        return true;
     }
 }
