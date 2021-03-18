@@ -25,19 +25,19 @@ input[type=number] {
     transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-input[type=number]:focus{
+input[type=number]:focus {
     border: 2px solid #cc13ffff;
     box-shadow: 0 0 0 .1rem #cc13ff88;
 }
 
-.buttonGroup{
+.buttonGroup {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 5px;
 }
 
-.buttons{
+.buttons {
     outline: none;
     border: 1px solid #cc13ffff;
     background-color: #FFFFFF00;
@@ -51,7 +51,7 @@ input[type=number]:focus{
     border-radius: 3px;
 }
 
-.buttons:active{
+.buttons:active {
     box-shadow: 0 0 0 0.2rem #cc13ffff;
     background-color: #cc13ffff;
     color: white;
@@ -62,7 +62,7 @@ input[type=number]:focus{
     height: 100vh;
 }
 
-#treeContainer{
+#treeContainer {
     width: 100%;
     height: 100%;
     display: block;
@@ -71,5 +71,14 @@ input[type=number]:focus{
 
 .node {
     display: block;
-    transition: 9s ease-in-out;
+    animation: circleFade 1s ease-in-out backwards; 
+}
+
+@keyframes circleFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
 }

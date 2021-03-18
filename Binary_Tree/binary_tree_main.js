@@ -23,6 +23,7 @@ function drawNode(x, y, value, r) {
     container.appendChild(circle)
     container.appendChild(textSvg)
     circle.classList.add('node')
+    textSvg.classList.add('node')
 }
 
 function connectNodes(node1, node2) {
@@ -36,6 +37,7 @@ function connectNodes(node1, node2) {
     line.style = 'z-index: 1;'
 
     container.appendChild(line)
+    line.classList.add('node')
 }
 var tree = new BST();
 var i = 0;
@@ -43,8 +45,8 @@ insertButton.onclick = () => {
     i = parseInt(inputtext.value);
     if (inputtext.value) {
         tree.add(i);
-        //tree.update()
-        //tree.draw()
+        tree.update()
+        tree.draw()
     } else {
         alert('Please enter some value')
     }
@@ -54,8 +56,8 @@ deleteButton.onclick = () => {
     i = parseInt(inputtext.value);
     if (inputtext.value) {
         tree.delete(i);
-        //tree.update()
-        //tree.draw()
+        tree.update()
+        tree.draw()
     } else {
         alert('Please enter some value')
     }
