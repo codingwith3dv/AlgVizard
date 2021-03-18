@@ -70,13 +70,13 @@ TreeNode.prototype.deleteNode = function(val) {
 TreeNode.prototype.drawNodes = function(parentNode) {
 
     if (this.left != null) {
-        window.requestAnimationFrame(() => { this.left.drawNodes(this) })
-        //this.left.drawNodes(this);
+        //window.requestAnimationFrame(() => { this.left.drawNodes(this) })
+        this.left.drawNodes(this);
     }
 
     if (this.right != null) {
-        window.requestAnimationFrame(() => { this.right.drawNodes(this) })
-        //this.right.drawNodes(this);
+        //window.requestAnimationFrame(() => { this.right.drawNodes(this) })
+        this.right.drawNodes(this);
     }
 
     connectNodes(this, parentNode)

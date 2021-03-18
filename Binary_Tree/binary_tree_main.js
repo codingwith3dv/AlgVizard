@@ -20,13 +20,9 @@ function drawNode(x, y, value, r) {
     textSvg.setAttributeNS(null, 'font-size', '15')
     textSvg.innerHTML = value
 
-    setTimeout(() => {
-        window.requestAnimationFrame(() => {
-            container.appendChild(circle)
-            container.appendChild(textSvg)
-            circle.classList.add('node')
-        })
-    }, 500)
+    container.appendChild(circle)
+    container.appendChild(textSvg)
+    circle.classList.add('node')
 }
 
 function connectNodes(node1, node2) {
@@ -82,4 +78,4 @@ tree.add(9)
 tree.add(27)
 
 tree.update()
-    tree.draw()
+tree.draw()
