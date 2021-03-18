@@ -4,8 +4,6 @@ var inputtext = document.getElementById('inputnum')
 var container = document.getElementById('treeContainer')
 var svg = "http://www.w3.org/2000/svg";
 
-var nodes = []
-
 function drawNode(node, node2) {
     var container2 = document.createElementNS(svg, 'g')
     var circle = document.createElementNS(svg, 'circle')
@@ -64,26 +62,11 @@ deleteButton.onclick = () => {
     }
 }
 
-var k = 0
 for (var i = 0; i < 5; i++) {
     //tree.add(Math.floor(Math.random() * (98 - 5 + 1)) + 5)
 }
 
-tree.add(15)
-tree.add(25)
-tree.add(10)
-tree.add(7)
-tree.add(22)
-tree.add(17)
-tree.add(13)
-tree.add(5)
-tree.add(9)
-tree.add(27)
-
-tree.update() 
-
-setInterval(() => {
+tree.update()
+setInterval( async () => {
     tree.draw()
 }, 1000/60)
-
-//tree.draw()

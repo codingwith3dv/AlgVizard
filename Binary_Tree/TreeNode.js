@@ -145,46 +145,31 @@ TreeNode.prototype.goToPos = function() {
     if (Math.abs(dy) > nodeSpeed || Math.abs(dx) > nodeSpeed) {
         if (Math.abs(dy) > Math.abs(dx)) {
 
-            if (this.y > this.currY)
-                this.currY += nodeSpeed;
-            else
-                this.currY -= nodeSpeed;
+            if (this.y > this.currY) this.currY += nodeSpeed;
+            else this.currY -= nodeSpeed;
 
-            if (slope == 0) {
-                this.currX += nodeSpeed;
-            }
-            else
-                this.currX = (this.currY + slope * x1 - y1) / slope;
+            if (slope == 0) this.currX += nodeSpeed;
+            else this.currX = (this.currY + slope * x1 - y1) / slope;
 
             if (Math.abs(slope) < EP) {
-                if (this.x > this.currX)
-                    this.currX += nodeSpeed;
-                else
-                    this.currX -= nodeSpeed;
-            }
-            else {
+                if (this.x > this.currX) this.currX += nodeSpeed;
+                else this.currX -= nodeSpeed;
+            } else {
                 this.currX = (this.currY + slope * x1 - y1) / slope;
             }
-        }
-        else {
-            if (this.x > this.currX)
-                this.currX += nodeSpeed;
-            else
-                this.currX -= nodeSpeed;
+        } else {
+            if (this.x > this.currX) this.currX += nodeSpeed;
+            else this.currX -= nodeSpeed;
 
             if (Math.abs(slope) < EP) {
-                if (this.y > this.currY)
-                    this.currY += nodeSpeed;
-                else
-                    this.currY -= nodeSpeed;
-            }
-            else {
+                if (this.y > this.currY) this.currY += nodeSpeed;
+                else this.currY -= nodeSpeed;
+            } else {
                 this.currY = (slope * this.currX - slope * x1 + y1);
             }
         }
         return false;
-    }
-    else {
+    } else {
         return true;
     }
 }
