@@ -42,27 +42,27 @@ TreeNode.prototype.deleteNode = function(val) {
         this.right = this.right.deleteNode(val);
         return this;
     } else {
-        
-        if(this.left === null && this.right === null){
+
+        if (this.left === null && this.right === null) {
             var node = this;
             node = null;
             return node;
         }
-        
-        if(this.left === null) return this.right;
-        if(this.right === null) return this.left;
-        
+
+        if (this.left === null) return this.right;
+        if (this.right === null) return this.left;
+
         var p = this.right;
-        
+
         while (p.left !== null) {
             p = p.left;
         }
-        
+
         this.data = p.data;
         this.right = this.right.deleteNode(p.data)
-        
+
         return this;
-        
+
     }
 
 }
@@ -72,13 +72,14 @@ TreeNode.prototype.drawNodes = function(parentNode) {
     if (this.left != null) {
         this.left.drawNodes(this);
     }
-
+    
     if (this.right != null) {
         this.right.drawNodes(this);
     }
-
+    
     connectNodes(this, parentNode)
     drawNode(this.x, this.y, this.data, this.radius)
+
 }
 
 TreeNode.prototype.getLevels = function(parent) {

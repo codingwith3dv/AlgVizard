@@ -21,7 +21,6 @@ BST.prototype.delete = function(data) {
 
 BST.prototype.draw = function() {
     container.innerHTML = ''
-    index = 0;
     if (this.root == null) return;
     this.root.drawNodes(this.root)
 }

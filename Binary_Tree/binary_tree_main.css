@@ -64,8 +64,12 @@ input[type=number]:focus{
 
 #treeContainer{
     width: 100%;
-    padding: 0px;
-    box-sizing: border-box;
     height: 100%;
+    display: block;
     background-color: #E2E2E2;
+}
+
+.node {
+    display: block;
+    transition: 9s ease-in-out;
 }
