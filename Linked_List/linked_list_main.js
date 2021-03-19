@@ -1,7 +1,7 @@
 var linkedlist = new LinkedList();
 
-linkedlist.insertAtEnd(10)
-linkedlist.insertAtEnd(20)
-linkedlist.insertAtEnd(30)
-
-linkedlist.printAll()
+document.getElementById('insertll').onclick = async() => {
+    var value = document.getElementById('inputnumll').value;
+    value = parseInt(value)
+    linkedlist.add(0, value)
+}

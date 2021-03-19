@@ -57,14 +57,83 @@ input[type=number]:focus {
     color: white;
 }
 
-.linkContainerContainer {
-    width: 100%;
-    height: 100vh;
+#list {
+    width: 95%;
+    padding-left: 5%;
+    margin: 2.5%;
+    box-sizing: border-box; 
+    display: flex;
+    background-color: #E2E2E2;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
 }
 
-#linkContainer {
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-color: #E2E2E2;
+::webkit-scrollbar {
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #4d4de0; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background: #7e7eed;
+}
+
+#list {
+    scrollbar-color: #7474fd rgb(202, 190, 255);
+    scrollbar-width: thin;
+}
+
+#list > div{
+    display: inline-block;
+    flex: 0 0 auto;
+    margin: 10px;
+    vertical-align: top;
+}
+
+.node{
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    background-color: #cc13ffff;
+    text-align: center;
+    color: #fff;
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(0);
+    }
+    80% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes highlightNode {
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes moveRightNode{
+    50%{
+        transform: translateX(250%);
+    }
+    100%{
+        transform: translateX(200%);
+
+    }
 }
