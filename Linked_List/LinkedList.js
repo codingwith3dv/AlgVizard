@@ -25,12 +25,12 @@ LinkedList.prototype.animateNodes = async function(fromNode, toNode) {
 LinkedList.prototype.animateNodesForInsert = async function(from, to) {
     return new Promise(resolve => {
         for (var j = from; j < to; j++) {
-            nodes[j].style.animation = 'moveRightNode 1s ease'
+            nodes[j].style.animation = 'moveRightNode 0.8s ease'
             setTimeout(async() => {
                 nodes[j].style.animation = null
-            }, 1000);
+            }, 800);
         }
-        setTimeout(() => resolve(), 1000)
+        setTimeout(() => resolve(), 800)
     });
 
 };
