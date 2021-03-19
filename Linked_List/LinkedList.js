@@ -22,11 +22,11 @@ LinkedList.prototype.animateNodes = async function(fromNode, toNode) {
     }
 }
 
-LinkedList.prototype.animateNodesForInsert = function(from, to) {
+LinkedList.prototype.animateNodesForInsert = async function(from, to) {
     return new Promise(resolve => {
         for (var j = from; j < to; j++) {
             nodes[j].style.animation = 'moveRightNode 1s ease'
-            setTimeout(() => {
+            setTimeout(async() => {
                 nodes[j].style.animation = null
             }, 1000);
         }
@@ -38,10 +38,10 @@ LinkedList.prototype.animateNodesForInsert = function(from, to) {
 LinkedList.prototype.add = async function(index, data) {
     var node = document.createElement('div');
     node.classList.add('node');
-    
+
     var nodedata = document.createElement('div');
-    
-    
+
+
     var text = document.createTextNode(data);
     nodedata.appendChild(text);
     node.appendChild(nodedata)
@@ -51,11 +51,11 @@ LinkedList.prototype.add = async function(index, data) {
         container.appendChild(node);
     } else {
         await this.animateNodes(0, index - 1);
-        await this.animateNodesForInsert(index, nodes.length-1);
+        await this.animateNodesForInsert(index, nodes.length - 1);
         container.insertBefore(node, nodes[index]);
     }
     node.style.animation = `grow 1s ease`;
     setTimeout(() => {
-        
+
     }, 1000);
 };
