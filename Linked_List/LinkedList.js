@@ -7,7 +7,7 @@ function LinkedList() {
 
 LinkedList.prototype.animateNode = function(index) {
     return new Promise(resolve => {
-        nodes[index].style.animation = `grow 1s ease`
+        nodes[index].style.animation = `highlightNode 1s ease`
         setTimeout(() => {
             nodes[index].style.animation = null;
             resolve()
@@ -26,11 +26,11 @@ LinkedList.prototype.animateNodesForInsert = async function(from, to) {
     return new Promise(resolve => {
         for (var j = from; j < to; j++) {
             nodes[j].style.animation = 'moveRightNode 0.8s ease'
-            setTimeout(async() => {
+            setTimeout(() => {
                 nodes[j].style.animation = null
-            }, 800);
+            }, 1800);
         }
-        setTimeout(() => resolve(), 800)
+        setTimeout(() => resolve(), 1800)
     });
 
 };
@@ -55,7 +55,4 @@ LinkedList.prototype.add = async function(index, data) {
         container.insertBefore(node, nodes[index]);
     }
     node.style.animation = `grow 1s ease`;
-    setTimeout(() => {
-
-    }, 1000);
 };
