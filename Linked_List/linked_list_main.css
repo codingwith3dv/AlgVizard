@@ -136,6 +136,5 @@ input[type=number]:focus {
     }
     100%{
         transform: translateX(200%);
-
     }
 }
