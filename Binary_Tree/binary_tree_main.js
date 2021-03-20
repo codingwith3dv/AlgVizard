@@ -62,7 +62,7 @@ deleteButton.onclick = () => {
     }
 }
 
-for (var i = 0; i < 5; i++) {
+for (var i = 0; i < 4; i++) {
     tree.add(Math.floor(Math.random() * (99 - 5 + 1)) + 5)
     tree.update()
 }

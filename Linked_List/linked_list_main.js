@@ -4,12 +4,12 @@ var linkedlist = new LinkedList();
 
 document.getElementById('appendll').onclick = async() => {
     var value = document.getElementById('inputnumll').value;
-    value = parseInt(value)
+    value = parseFloat(value)
     linkedlist.addNode(value)
 }
 
 document.getElementById('deletell').onclick = async() => {
     var value = document.getElementById('inputnumll').value;
-    value = parseInt(value)
+    value = parseFloat(value)
     linkedlist.deleteNode(value)
 }
