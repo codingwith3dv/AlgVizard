@@ -130,36 +130,43 @@
     border-radius: 50px;
 }
 
-.codeblock {
-    width: auto;
-    height: auto;
-    max-height: 300px;
-    background-color: #E2E2E2;
-    margin: 10px;
-    border-radius: 10px;
-    padding: 15px;
-    box-sizing: border-box;
+pre {
+    color: #000;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    border-radius: 10px ;
     overflow: scroll;
-    color: black;
+    padding: 1em 1.5em;
+    display: block;
+    max-height: 300px;
+    word-wrap: break-word;
 }
 
 ::-webkit-scrollbar {
     height: 10px;
     width: 10px;
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: 0 0 0 5rem #ffffff;
-  border-radius: 10px;
+    box-shadow: inset 0 0 3px #000;
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
     border-radius: 15px;
-    background: #7e7eed;
+    background: #cc13ffff;
+    box-shadow: inset 0 0 3px #000;
 }
 
-
-code {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bolder;
+.codeContainer {
+    width: auto;
+    margin: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #E2E2E2;
 }
