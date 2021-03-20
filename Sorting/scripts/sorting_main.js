@@ -103,3 +103,9 @@ startButton.addEventListener("click", () => {
 function enableSpinner(){
     alg.style.backgroundColor='#FFF'
 }
+
+function checkIfDropIsValid(){
+    if (start_enabled !== true) {
+        return;
+    }
+}

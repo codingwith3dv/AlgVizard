@@ -26,8 +26,8 @@
     position: relative;
     border-radius: 10px;
     margin: 5px;
-    -ms-grid-columns: 70% 30%;
-    grid-template-columns: 70% 30%;
+    -ms-grid-columns: 0% 100%;
+    grid-template-columns: 0% 100%;
     background-color: rgba(0, 0, 0, 0.9);
 }
 
@@ -62,7 +62,8 @@
     outline: none;
     color: black;
     font-weight: bold;
-    border: none;/*1px solid #C8BFC4;*/
+    border: none;
+    /*1px solid #C8BFC4;*/
     border-radius: 4px;
     font-size: 0.6rem;
     padding: 3px;
@@ -74,7 +75,7 @@
 }
 
 #startButton {
-    
+
     outline: none;
     border-radius: 50px;
     padding: 5px;
