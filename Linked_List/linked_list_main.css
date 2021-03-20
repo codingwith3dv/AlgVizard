@@ -105,6 +105,7 @@ input[type=number]:focus {
     background-color: #cc13ffff;
     text-align: center;
     color: #fff;
+    z-index: 1;
 }
 
 @keyframes grow {
@@ -150,5 +151,29 @@ input[type=number]:focus {
     position: relative;
     width: 40px;
     height: 80px;
-    z-index: 1;
+    z-index: 0;
 }
+
+@keyframes slide {
+    0% {
+        transform: translateX(-100%);
+    }
+    80% {
+        transform: translateX(10%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes highlightPointer {
+    33% {
+        transform: rotate(10deg);
+    }
+    66% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+} 

@@ -16,10 +16,21 @@ LinkedList.prototype.animateNode = function(index) {
     });
 };
 
+LinkedList.prototype.animatePointer = function(index) {
+    return new Promise(resolve => {
+        pointers[index].style.animation = `highlightPointer .8s ease`
+        setTimeout(() => {
+            pointers[index].style.animation = null;
+            resolve()
+        }, 800);
+    });
+};
+
 LinkedList.prototype.animateNodes = async function(fromNode, toNode) {
 
     for (var i = fromNode; i <= toNode; i++) {
         await this.animateNode(i);
+        await this.animatePointer(i);
     }
 }
 
@@ -33,8 +44,13 @@ LinkedList.prototype.animateNodesForInsert = function(fromNode, toNode) {
                 800 / 1000 + "s " +
                 "ease";
 
+            pointers[i].style.animation = "moveRightNode " +
+                800 / 1000 + "s " +
+                "ease";
+
             setTimeout(() => {
                 nodes[i].style.animation = null;
+                pointers[i].style.animation = null;
             }, 800)
         }
 
@@ -55,11 +71,12 @@ LinkedList.prototype.add = async function(index, data) {
 
     var pointer = document.createElement('div');
     pointer.classList.add('pointers');
-    
+    pointer.style.opacity = '0';
+
     var image = document.createElement('img');
     image.src = './21243359731558965381.svg';
     image.classList.add('image')
-    
+
     pointer.appendChild(image)
 
     console.log(nodes.length);
@@ -75,4 +92,9 @@ LinkedList.prototype.add = async function(index, data) {
         container.insertBefore(node, pointer)
     }
     node.style.animation = `grow 1s ease`;
+
+    setTimeout(() => {
+        pointer.style.opacity = '1'
+        pointer.style.animation = 'slide 0.8s ease'
+    }, 1000)
 };
