@@ -5,5 +5,5 @@ linkedlist.add(0, 1)
 document.getElementById('appendll').onclick = async() => {
     var value = document.getElementById('inputnumll').value;
     value = parseInt(value)
-    linkedlist.add(1, value)
+    linkedlist.addNode(value)
 }

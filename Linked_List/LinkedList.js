@@ -3,7 +3,7 @@ var nodes = document.getElementsByClassName('node');
 var pointers = document.getElementsByClassName('pointers')
 
 function LinkedList() {
-
+    this.head = null;
 };
 
 LinkedList.prototype.animateNode = function(index) {
@@ -58,6 +58,27 @@ LinkedList.prototype.animateNodesForInsert = function(fromNode, toNode) {
     });
 
 };
+
+LinkedList.prototype.getIndex = function(item) {
+    var count = 0;
+    for(var node = this.head; node !== null; node = node.next, count++){
+        if(item === node){
+            return count;
+        }
+    }
+    return -1;
+}
+
+LinkedList.prototype.addNode = function(data) {
+    var newNode = new LinkNode(data);
+    
+    if(this.head === null || this.head.data >= newNode.data){
+        newNode.next = this.head;
+        this.head = newNode;
+        this.add(this.getIndex(this.head), data);
+        return this.head;
+    }
+}
 
 LinkedList.prototype.add = async function(index, data) {
     var node = document.createElement('div');
