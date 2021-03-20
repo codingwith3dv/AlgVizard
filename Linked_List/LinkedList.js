@@ -34,11 +34,22 @@ LinkedList.prototype.animateNodes = async function(fromNode, toNode) {
     }
 }
 
+LinkedList.prototype.animateDeleteNode = function(index) {
+    return new Promise(resolve => {
+        nodes[index].style.animation = 'deleteNode 1s ease';
+        pointers[index].style.animation = 'deleteNode 1s ease';
+        setTimeout(() => {
+            container.removeChild(nodes[index]);
+            container.removeChild(pointers[index]);
+            resolve()
+        }, 1000)
+    });
+}
+
 LinkedList.prototype.animateNodesForInsert = function(fromNode, toNode) {
     return new Promise(resolve => {
         for (let i = fromNode; i < toNode; i++) {
-            console.log('length3', nodes.length)
-
+            
             nodes[i].style.animation =
                 "moveRightNode " +
                 800 / 1000 + "s " +
@@ -55,6 +66,30 @@ LinkedList.prototype.animateNodesForInsert = function(fromNode, toNode) {
         }
 
         setTimeout(() => resolve(), 800)
+    });
+
+};
+
+LinkedList.prototype.animateNodesForDelete = function(fromNode) {
+    return new Promise(resolve => {
+        for (let i = fromNode; i < nodes.length; i++) {
+            
+            nodes[i].style.animation =
+                "moveLeftNode " +
+                1000 / 1000 + "s " +
+                "ease";
+
+            pointers[i].style.animation = "moveLeftNode " +
+                1000 / 1000 + "s " +
+                "ease";
+
+            setTimeout(() => {
+                nodes[i].style.animation = null;
+                pointers[i].style.animation = null;
+            }, 1000)
+        }
+
+        setTimeout(() => resolve(), 1000)
     });
 
 };
@@ -90,6 +125,25 @@ LinkedList.prototype.addNode = function(data) {
     return this.head;
 }
 
+LinkedList.prototype.deleteNode = async function(data) {
+    if(this.head.data === data) {
+        this.head = this.head.next;
+        await this.animateDeleteNode(this.getIndex(this.head), data);
+        await this.animateNodesForDelete(this.getIndex(this.head));
+        return this.head;
+    }
+    
+    var current = this.head;
+    while(current.next !== null && current.data !== data) {
+        current = current.next;
+    }
+    
+    //current = current.next;
+    await this.animateDeleteNode(this.getIndex(current), data);
+    await this.animateNodesForDelete(this.getIndex(current)); 
+    return this.head;
+}
+
 LinkedList.prototype.add = async function(index, data) {
     var node = document.createElement('div');
     node.classList.add('node');
@@ -109,8 +163,6 @@ LinkedList.prototype.add = async function(index, data) {
     image.classList.add('image')
 
     pointer.appendChild(image)
-
-    console.log(nodes.length);
 
     if (index === nodes.length) {
         await this.animateNodes(0, nodes.length - 1);

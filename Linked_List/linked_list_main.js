@@ -7,3 +7,9 @@ document.getElementById('appendll').onclick = async() => {
     value = parseInt(value)
     linkedlist.addNode(value)
 }
+
+document.getElementById('deletell').onclick = async() => {
+    var value = document.getElementById('inputnumll').value;
+    value = parseInt(value)
+    linkedlist.deleteNode(value)
+}
