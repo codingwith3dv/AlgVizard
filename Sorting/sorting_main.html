@@ -26,23 +26,30 @@
         </div>
         <div id="arrayContainer">
         </div>
-        <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'BubbleSort')">Bubble Sort</button>
-            <button class="tablinks" onclick="openTab(event, 'BubbleSort')">Quick Sort</button>
-            <button class="tablinks" onclick="openTab(event, 'BubbleSort')">Merge Sort</button>
-        </div>
-        <div class="codeContainer" id="BubbleSort">
-            <pre>
+        
+        <div class="tabContainer">
+            <div class="tab">
+                <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'BubbleSort')">Bubble Sort</button>
+                <button class="tablinks" onclick="openTab(event, 'BubbleSort')">Quick Sort</button>
+                <button class="tablinks" onclick="openTab(event, 'BubbleSort')">Merge Sort</button>
+            </div>
+            <div class="codeContainer" id="BubbleSort">
+                <pre>
 for i = 0 to array_length
     for j = to array_length - i - 1
         if array[j] &gt array[j+1]
             swap array[j] with array[j+1]</pre>
+            </div>
         </div>
+        
     </div>
     <script type="text/javascript" src="./scripts/bubble_sort.js"></script>
     <script type="text/javascript" src="./scripts/merge_sort.js"></script>
     <script type="text/javascript" src="./scripts/quick_sort.js"></script>
     <script type="text/javascript" src="./scripts/sorting_main.js"></script>
+    <script>
+        document.getElementById("defaultOpen").click();
+    </script>
 </body>
 
 </html>

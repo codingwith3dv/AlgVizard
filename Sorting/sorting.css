@@ -164,14 +164,17 @@ pre {
 
 .tab {
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
+    border-radius: 10px 10px 0 0;
 }
 
 .tab button {
   background-color: inherit;
-  float: left;
   border: none;
+  width: 100%;
   outline: none;
   padding: 14px 16px;
   transition: 0.3s;
@@ -188,8 +191,13 @@ pre {
 .codeContainer {
     width: auto;
     display: none;
-    margin: 10px;
-    border-radius: 10px;
+    margin: 0px;
+    border-radius: 0 0 10px 10px;
     box-sizing: border-box;
     background-color: #E2E2E2;
+}
+
+.tabContainer {
+    margin: 10px;
+    width: auto;
 }
