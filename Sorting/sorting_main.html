@@ -26,31 +26,38 @@
         </div>
         <div id="arrayContainer">
         </div>
-        
         <div class="tabContainer">
             <div class="tab">
-                <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'BubbleSort')">Bubble Sort</button>
-                <button class="tablinks" onclick="openTab(event, 'BubbleSort')">Quick Sort</button>
-                <button class="tablinks" onclick="openTab(event, 'BubbleSort')">Merge Sort</button>
+                <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'BubbleSortAlg')">Bubble Sort</button>
+                <button class="tablinks" onclick="openTab(event, 'QuickSortAlg')">Quick Sort</button>
+                <button class="tablinks" onclick="openTab(event, 'BubbleSortAlg')">Merge Sort</button>
             </div>
-            <div class="codeContainer" id="BubbleSort">
+            <div class="codeContainer tabcontent" id="BubbleSortAlg">
                 <pre>
+//bubble sort
 //takes in array and array length
 for i = 0 to array_length
     for j = to array_length - i - 1
         if array[j] &gt array[j+1]
             swap array[j] with array[j+1]</pre>
             </div>
+            <div class="codeContainer tabcontent" id="QuickSortAlg">
+                <pre>
+//quick sort
+//takes in array and start index and end index
+if start &lt end
+    result = partition(array, start, end)
+    recursively call self (array, start, result - 1)
+    recursively call self (array, result + 1,end)</pre>
+            </div>
         </div>
-        
-    </div>
-    <script type="text/javascript" src="./scripts/bubble_sort.js"></script>
-    <script type="text/javascript" src="./scripts/merge_sort.js"></script>
-    <script type="text/javascript" src="./scripts/quick_sort.js"></script>
-    <script type="text/javascript" src="./scripts/sorting_main.js"></script>
-    <script>
-        document.getElementById("defaultOpen").click();
-    </script>
+        <script type="text/javascript" src="./scripts/bubble_sort.js"></script>
+        <script type="text/javascript" src="./scripts/merge_sort.js"></script>
+        <script type="text/javascript" src="./scripts/quick_sort.js"></script>
+        <script type="text/javascript" src="./scripts/sorting_main.js"></script>
+        <script>
+            document.getElementById("defaultOpen").click();
+        </script>
 </body>
 
 </html>
