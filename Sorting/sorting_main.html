@@ -30,7 +30,7 @@
             <div class="tab">
                 <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'BubbleSortAlg')">Bubble Sort</button>
                 <button class="tablinks" onclick="openTab(event, 'QuickSortAlg')">Quick Sort</button>
-                <button class="tablinks" onclick="openTab(event, 'BubbleSortAlg')">Merge Sort</button>
+                <button class="tablinks" onclick="openTab(event, 'MergeSortAlg')">Merge Sort</button>
             </div>
             <div class="codeContainer tabcontent" id="BubbleSortAlg">
                 <pre>
@@ -48,8 +48,31 @@ for i = 0 to array_length
 if start &lt end
     result = partition(array, start, end)
     recursively call self (array, start, result - 1)
-    recursively call self (array, result + 1,end)</pre>
+    recursively call self (array, result + 1,end)
+    
+//partition
+//takes in array, low and high
+//sets pivot to last element and moves it to correct
+//position then move all elements less to pivot to
+//its left and greater to its right
+pivot = array[high]
+index = low - 1
+
+for j = 0, j less or equal to high - 1
+    if array[j] &lt pivot
+        index++
+        swap array[i] with array[j]
+        
+swap array[index + 1] with array[high]
+return index + 1</pre>
             </div>
+            
+            
+            <div class="codeContainer tabcontent" id="MergeSortAlg">
+                <pre>
+//Merge Sort</pre>
+            </div>
+            
         </div>
         <script type="text/javascript" src="./scripts/bubble_sort.js"></script>
         <script type="text/javascript" src="./scripts/merge_sort.js"></script>
