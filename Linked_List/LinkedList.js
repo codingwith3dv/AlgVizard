@@ -61,8 +61,8 @@ LinkedList.prototype.animateNodesForInsert = function(fromNode, toNode) {
 
 LinkedList.prototype.getIndex = function(item) {
     var count = 0;
-    for(var node = this.head; node !== null; node = node.next, count++){
-        if(item === node){
+    for (var node = this.head; node !== null; node = node.next, count++) {
+        if (item === node) {
             return count;
         }
     }
@@ -71,13 +71,23 @@ LinkedList.prototype.getIndex = function(item) {
 
 LinkedList.prototype.addNode = function(data) {
     var newNode = new LinkNode(data);
-    
-    if(this.head === null || this.head.data >= newNode.data){
+
+    if (this.head === null || this.head.data >= newNode.data) {
         newNode.next = this.head;
         this.head = newNode;
         this.add(this.getIndex(this.head), data);
         return this.head;
     }
+
+    var current = this.head;
+    while (current.next != null && current.next.data < newNode.data) {
+        current = current.next;
+    }
+
+    newNode.next = current.next;
+    current.next = newNode;
+    this.add(this.getIndex(current.next), data);
+    return this.head;
 }
 
 LinkedList.prototype.add = async function(index, data) {
