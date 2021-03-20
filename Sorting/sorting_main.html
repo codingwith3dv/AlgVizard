@@ -26,7 +26,12 @@
         </div>
         <div id="arrayContainer">
         </div>
-        <div class="codeContainer">
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'BubbleSort')">Bubble Sort</button>
+            <button class="tablinks" onclick="openTab(event, 'BubbleSort')">Quick Sort</button>
+            <button class="tablinks" onclick="openTab(event, 'BubbleSort')">Merge Sort</button>
+        </div>
+        <div class="codeContainer" id="BubbleSort">
             <pre>
 for i = 0 to array_length
     for j = to array_length - i - 1

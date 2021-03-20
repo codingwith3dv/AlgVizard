@@ -162,8 +162,32 @@ pre {
     background: #cc13ffff;
 }
 
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  transition: 0.3s;
+} 
+
+.tab button:hover {
+  background-color: #ddd;
+} 
+
+.tab button.active {
+  background-color: #ccc;
+} 
+
 .codeContainer {
     width: auto;
+    display: none;
     margin: 10px;
     border-radius: 10px;
     box-sizing: border-box;
