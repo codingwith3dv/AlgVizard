@@ -66,8 +66,7 @@ input[type=number]:focus {
     display: flex;
     background-color: #E2E2E2;
     flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow-x: scroll;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -78,6 +77,20 @@ input[type=number]:focus {
     flex: 0 0 auto;
     margin: 10px;
     vertical-align: top;
+}
+
+::-webkit-scrollbar{
+    height: 5px;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #cc13ffff;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 10px;
 }
 
 .node{
