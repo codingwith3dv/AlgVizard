@@ -1,5 +1,6 @@
 var container = document.getElementById('list');
 var nodes = document.getElementsByClassName('node');
+var pointers = document.getElementsByClassName('pointers')
 
 function LinkedList() {
 
@@ -48,20 +49,30 @@ LinkedList.prototype.add = async function(index, data) {
 
     var nodedata = document.createElement('div');
 
-
     var text = document.createTextNode(data);
     nodedata.appendChild(text);
     node.appendChild(nodedata)
+
+    var pointer = document.createElement('div');
+    pointer.classList.add('pointers');
+    
+    var image = document.createElement('img');
+    image.src = './21243359731558965381.svg';
+    image.classList.add('image')
+    
+    pointer.appendChild(image)
 
     console.log(nodes.length);
 
     if (index === nodes.length) {
         await this.animateNodes(0, nodes.length - 1);
         container.appendChild(node);
+        container.appendChild(pointer);
     } else {
         await this.animateNodes(0, index - 1);
         await this.animateNodesForInsert(index, nodes.length);
-        container.insertBefore(node, nodes[index]);
+        container.insertBefore(pointer, nodes[index]);
+        container.insertBefore(node, pointer)
     }
     node.style.animation = `grow 1s ease`;
 };

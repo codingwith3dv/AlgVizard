@@ -139,6 +139,16 @@ input[type=number]:focus {
     }
 }
 
-.img {
-    mix-blend-mode: multiply;
+.image {
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%,-50%);
+}
+
+.pointers {
+    position: relative;
+    width: 40px;
+    height: 80px;
+    z-index: 1;
 }
