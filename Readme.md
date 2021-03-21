@@ -22,4 +22,4 @@ which includes:
    * Deletion
    * Searching
 
-All algorithms has an animated visualization which also includes a commented pseudo code explanation of the algorithm. It also specifies the space time complexity of each operation.
+All algorithms has an animated visualization which also includes a commented pseudo code explanation of the algorithms. It also specifies the space time complexity of each operation.
