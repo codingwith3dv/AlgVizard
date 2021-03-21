@@ -30,7 +30,17 @@
         <div class = "codeContainer tabcontent" id = "InsertAlg">
             <pre>
 //Insertion in binary tree
-            </pre>
+//takes in a node to insert as val and the root element
+if newNode.data &lt root.data
+    if root.left is null
+        root.left = newNode
+    else
+        recursively call self (newNode, root.left)
+else
+    if root.right is null
+        root.right = newNode
+    else
+        recursively call self (newNode, root.right)</pre>
         </div>
         <div class = "codeContainer tabcontent" id = "DeleteAlg">
             <pre>
