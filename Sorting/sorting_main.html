@@ -115,8 +115,13 @@ return array</pre>
 
             algButton.onclick = () => {
                 if (content.style.display === "block") {
-                    content.style.display = "none";
+                    content.style.animation = 'disappear 1s ease'
+                    setTimeout(() => {
+                        content.style.animation = null;
+                        content.style.display = "none";
+                    }, 1000)
                 } else {
+                    content.style.animation = 'appear 1s ease'
                     content.style.display = "block";
                 }
             }
