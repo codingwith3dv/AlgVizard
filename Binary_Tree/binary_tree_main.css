@@ -88,7 +88,7 @@ input[type=number]:focus {
 pre {
     color: #000;
     page-break-inside: avoid;
-    font-size: .8rem;
+    font-size: 0.8rem;
     line-height: 1.6;
     margin-bottom: 1.6em;
     height: 12.8vh;
