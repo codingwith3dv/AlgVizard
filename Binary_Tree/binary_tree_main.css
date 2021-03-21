@@ -82,3 +82,75 @@ input[type=number]:focus {
         opacity: 100;
     }
 }
+
+pre {
+    color: #000;
+    page-break-inside: avoid;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    border-radius: 10px;
+    overflow: scroll;
+    padding: 1em 1.5em;
+    display: block;
+    max-height: 250px;
+    word-wrap: break-word;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+}
+
+::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background: #cc13ffff;
+}
+
+.tab {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    border-radius: 10px 10px 0 0;
+}
+
+.tab button {
+  background-color: inherit;
+  border: none;
+  width: 100%;
+  outline: none;
+  padding: 14px 16px;
+  transition: 0.3s;
+} 
+
+.tab button:hover {
+  background-color: #ddd;
+} 
+
+.tab button.active {
+  background-color: #ccc;
+} 
+
+.codeContainer {
+    width: auto;
+    display: none;
+    margin: 0px;
+    border-radius: 0 0 10px 10px;
+    box-sizing: border-box;
+    background-color: #E2E2E2;
+}
+
+.tabContainer {
+    margin: 10px;
+    width: auto;
+}
