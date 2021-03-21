@@ -103,6 +103,9 @@ startButton.addEventListener("click", () => {
                 // code
                 merge_Sort()
                 break;
+            case "Selection Sort":
+                selection_Sort()
+                break;
             default:
                 break;
 
