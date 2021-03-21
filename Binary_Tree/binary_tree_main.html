@@ -45,7 +45,30 @@ else
         <div class = "codeContainer tabcontent" id = "DeleteAlg">
             <pre>
 //Deletion in binary tree
-            </pre>
+//takes in value to delete and a root node
+if value &lt root.data
+    root.left = recursively call self(value, root.left)
+    return root
+else if value &gt root.data
+    root.right = recursively call self(value, root.right)
+    return root
+else 
+    if root.left equals null and root.right equals null
+        root = null
+        return root
+        
+    if root.left equals null
+        return root.right
+    if root.right equals null
+        return root.left
+        
+    aux = root.right
+    while aux.left not equals null
+        aux = aux.left
+        
+    root.data = aux.data 
+    root.right = recursively call self(aux.data,root.right)
+    return root</pre>
         </div>
     </div>
     
