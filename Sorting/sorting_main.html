@@ -28,9 +28,9 @@
         </div>
         <div class="tabContainer">
             <div class="tab">
-                <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'BubbleSortAlg')">Bubble Sort</button>
-                <button class="tablinks" onclick="openTab(event, 'QuickSortAlg')">Quick Sort</button>
-                <button class="tablinks" onclick="openTab(event, 'MergeSortAlg')">Merge Sort</button>
+                <button class="tablinks" id="bubble" onclick="openTab(event, 'BubbleSortAlg')">Bubble Sort</button>
+                <button class="tablinks" id="quick" onclick="openTab(event, 'QuickSortAlg')">Quick Sort</button>
+                <button class="tablinks" id="merge" onclick="openTab(event, 'MergeSortAlg')">Merge Sort</button>
             </div>
             <div class="codeContainer tabcontent" id="BubbleSortAlg">
                 <pre>
@@ -70,7 +70,41 @@ return index + 1</pre>
             
             <div class="codeContainer tabcontent" id="MergeSortAlg">
                 <pre>
-//Merge Sort</pre>
+//Merge Sort
+//takes in array, start and end
+if start &lt end
+    mid = (start + end)//2
+    recursively call self (array, start, mid)
+    recursively call self (array, mid + 1,end)
+    merge(array, start, mid, end)
+    
+//merge
+//takes in array, start, mid and end
+index = 0
+left = start
+right = mid + 1
+tempArray = []
+
+while left &lt= mid && right &lt= end
+    if array[left] &t= array[right]
+        tempArray[index] = array[left]
+        left++
+    else
+        tempArray[index] = array[right]
+        right++
+    index++
+    
+if left > mid
+    for i = right, less or equal to end
+        tempArray[index++] = array[i]
+else
+    for i = left, less or equal to mid
+        tempArray[index++] = array[i]
+        
+for k = 0 to array_length
+    array[start++] = tempArray[k]
+    
+return array</pre>
             </div>
             
         </div>
@@ -79,7 +113,7 @@ return index + 1</pre>
         <script type="text/javascript" src="./scripts/quick_sort.js"></script>
         <script type="text/javascript" src="./scripts/sorting_main.js"></script>
         <script>
-            document.getElementById("defaultOpen").click();
+            document.getElementById("bubble").click();
         </script>
 </body>
 

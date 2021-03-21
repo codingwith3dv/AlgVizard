@@ -1,5 +1,6 @@
 function quick_Sort() {
     time_interval = 0;
+    document.getElementById('quick').click() 
     quickSort(0,array_length-1)
     //enableSpinner()
     return "Quick Sort"

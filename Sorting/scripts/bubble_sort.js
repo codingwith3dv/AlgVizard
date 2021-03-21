@@ -1,5 +1,6 @@
 function bubble_Sort() {
     time_interval = 0
+    document.getElementById('bubble').click()
     for (var i = 0; i < array_length; i++) {
         for (var j = 0; j < array_length - i - 1; j++) {
             update_block(block_divs[j], block_divs_value[j], "yellow");

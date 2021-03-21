@@ -1,5 +1,6 @@
 function merge_Sort() {
     time_interval = 0;
+    document.getElementById('merge').click()
     merge_partition(0, array_length - 1);
     //enableSpinner()
     return 'Merge Sort';
