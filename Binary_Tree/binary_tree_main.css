@@ -60,6 +60,7 @@ input[type=number]:focus {
 .treeContainerContainer {
     width: 100%;
     height: 100vh;
+    position: absolute;
 }
 
 #treeContainer {
@@ -94,7 +95,7 @@ pre {
     overflow: scroll;
     padding: 1em 1.5em;
     display: block;
-    max-height: 250px;
+    max-height: 12.8vh;
     word-wrap: break-word;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bolder;
@@ -151,6 +152,8 @@ pre {
 }
 
 .tabContainer {
-    margin: 10px;
-    width: auto;
+    margin: 3%;
+    width: 94%;
+    position: absolute;
+    z-index: 1;
 }

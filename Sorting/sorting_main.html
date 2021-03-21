@@ -8,41 +8,40 @@
     <link rel="stylesheet" href="sorting.css" </head>
 
 <body>
-    <div class="content">
-        <div class="nav">
-            <div class="mainNav"></div>
-            <div class="controls">
-                <div class="dropDown">
-                    <select id="selectAlg" onclick="checkIfDropIsValid();">
-                        <option>Bubble Sort</option>
-                        <option>Quick Sort</option>
-                        <option>Merge Sort</option>
-                    </select>
-                    <button id="startButton">Sort</button>
-                </div>
-                <p class="value" id="value">Number Of Bars: 100</p>
-                <input id="size" type="range" min=20 max=100 step=1 value=20>
+    <div class="nav">
+        <div class="mainNav"></div>
+        <div class="controls">
+            <div class="dropDown">
+                <select id="selectAlg" onclick="checkIfDropIsValid();">
+                    <option>Bubble Sort</option>
+                    <option>Quick Sort</option>
+                    <option>Merge Sort</option>
+                </select>
+                <button id="startButton">Sort</button>
             </div>
+            <p class="value" id="value">Number Of Bars: 100</p>
+            <input id="size" type="range" min=20 max=100 step=1 value=20>
         </div>
-        <div id="arrayContainer">
+    </div>
+    <div id="arrayContainer">
+    </div>
+    <div class="tabContainer">
+        <div class="tab">
+            <button class="tablinks" id="bubble" onclick="openTab(event, 'BubbleSortAlg')">Bubble Sort</button>
+            <button class="tablinks" id="quick" onclick="openTab(event, 'QuickSortAlg')">Quick Sort</button>
+            <button class="tablinks" id="merge" onclick="openTab(event, 'MergeSortAlg')">Merge Sort</button>
         </div>
-        <div class="tabContainer">
-            <div class="tab">
-                <button class="tablinks" id="bubble" onclick="openTab(event, 'BubbleSortAlg')">Bubble Sort</button>
-                <button class="tablinks" id="quick" onclick="openTab(event, 'QuickSortAlg')">Quick Sort</button>
-                <button class="tablinks" id="merge" onclick="openTab(event, 'MergeSortAlg')">Merge Sort</button>
-            </div>
-            <div class="codeContainer tabcontent" id="BubbleSortAlg">
-                <pre>
+        <div class="codeContainer tabcontent" id="BubbleSortAlg">
+            <pre>
 //bubble sort
 //takes in array and array length
 for i = 0 to array_length
     for j = to array_length - i - 1
         if array[j] &gt array[j+1]
             swap array[j] with array[j+1]</pre>
-            </div>
-            <div class="codeContainer tabcontent" id="QuickSortAlg">
-                <pre>
+        </div>
+        <div class="codeContainer tabcontent" id="QuickSortAlg">
+            <pre>
 //quick sort
 //takes in array and start index and end index
 if start &lt end
@@ -65,11 +64,9 @@ for j = 0, j less or equal to high - 1
         
 swap array[index + 1] with array[high]
 return index + 1</pre>
-            </div>
-            
-            
-            <div class="codeContainer tabcontent" id="MergeSortAlg">
-                <pre>
+        </div>
+        <div class="codeContainer tabcontent" id="MergeSortAlg">
+            <pre>
 //Merge Sort
 //takes in array, start and end
 if start &lt end
@@ -105,8 +102,6 @@ for k = 0 to array_length
     array[start++] = tempArray[k]
     
 return array</pre>
-            </div>
-            
         </div>
         <script type="text/javascript" src="./scripts/bubble_sort.js"></script>
         <script type="text/javascript" src="./scripts/merge_sort.js"></script>
