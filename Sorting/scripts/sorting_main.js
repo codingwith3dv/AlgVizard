@@ -38,6 +38,8 @@ input_size.addEventListener("input", () => {
     value.innerText = "Number Of bars: " + array_length;
     start_enabled = true;
     startButton.innerText = "Sort"
+    alg.disabled=false
+    enableSpinner()
     generateArray()
 })
 
