@@ -21,11 +21,12 @@
             </div>
             <p class="value" id="value">Number Of Bars: 100</p>
             <input id="size" type="range" min=20 max=100 step=1 value=20>
+            <button id="alg">Alg</button>
         </div>
     </div>
     <div id="arrayContainer">
     </div>
-    <div class="tabContainer">
+    <div class="tabContainer" id="tabContainer">
         <div class="tab">
             <button class="tablinks" id="bubble" onclick="openTab(event, 'BubbleSortAlg')">Bubble Sort</button>
             <button class="tablinks" id="quick" onclick="openTab(event, 'QuickSortAlg')">Quick Sort</button>
@@ -108,7 +109,17 @@ return array</pre>
         <script type="text/javascript" src="./scripts/quick_sort.js"></script>
         <script type="text/javascript" src="./scripts/sorting_main.js"></script>
         <script>
+            var content = document.getElementById('tabContainer');
+            var algButton = document.getElementById('alg');
             document.getElementById("bubble").click();
+
+            algButton.onclick = () => {
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            }
         </script>
 </body>
 
