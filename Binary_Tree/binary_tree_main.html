@@ -15,19 +15,18 @@
             <button class="buttons" id="insert">Insert</button>
             <button class="buttons" id="delete">Delete</button>
         </div>
+        <button id="alg">Alg</button>
     </div>
     <div class="treeContainerContainer">
         <svg id="treeContainer">
         </svg>
     </div>
-    
-    <div class = "tabContainer">
-        <div class = "tab">
-            <button class = "tablinks" id = "insertbt" onclick = "openTab(event, 'InsertAlg')">Insertion</button>
-            <button class = "tablinks" id = "deletebt" onclick = "openTab(event, 'DeleteAlg')">Deletion</button>
+    <div class="tabContainer" id="tabContainer">
+        <div class="tab">
+            <button class="tablinks" id="insertbt" onclick="openTab(event, 'InsertAlg')">Insertion</button>
+            <button class="tablinks" id="deletebt" onclick="openTab(event, 'DeleteAlg')">Deletion</button>
         </div>
-        
-        <div class = "codeContainer tabcontent" id = "InsertAlg">
+        <div class="codeContainer tabcontent" id="InsertAlg">
             <pre>
 //Insertion in binary tree
 //takes in a node to insert as val and the root element
@@ -42,7 +41,7 @@ else
     else
         recursively call self (newNode, root.right)</pre>
         </div>
-        <div class = "codeContainer tabcontent" id = "DeleteAlg">
+        <div class="codeContainer tabcontent" id="DeleteAlg">
             <pre>
 //Deletion in binary tree
 //takes in value to delete and a root node
@@ -71,12 +70,27 @@ else
     return root</pre>
         </div>
     </div>
-    
     <script src="./TreeNode.js"></script>
     <script src="./BinaryTree.js"></script>
     <script src="./binary_tree_main.js"></script>
     <script>
         document.getElementById('insertbt').click()
+        var content = document.getElementById('tabContainer');
+        var algButton = document.getElementById('alg');
+
+        algButton.onclick = () => {
+            if (content.style.display === "block") {
+                content.style.animation = 'disappear 1s ease'
+                setTimeout(() => {
+                    content.style.animation = null;
+                    content.style.display = "none";
+                }, 1000)
+            } else {
+                content.style.animation = 'appear 1s ease'
+                content.style.display = "block";
+            }
+        }
+    </script>
     </script>
 </body>
 
