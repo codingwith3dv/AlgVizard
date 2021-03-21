@@ -1,12 +1,25 @@
-# What is this
-This is an algorithm visualizer made for Tech
-With Tim codejam
+# Algorithm visualizer
+This is an algorithm visualizer made for the theme `Visualization` in Tech With Tim Code jam
 
-# What is inside it
-It contains a visualizer which is made in
-`pure javascript` and `html` and `css`.
+It can give you a basic understanding of algorithms
+which includes:
 
-# About
-### Credits
-Made by Devesh Das or @CodingWith3DV which is my 
-youtube channel name. 
+* Sorting Algorithms
+  * Bubble Sort
+  * Quick Sort
+  * Merge Sort
+  * Insertion Sort
+  * Radix Sort
+  * Selection Sort
+  * Heap Sort
+* Binary Search Trees
+  * Insertion
+  * Deletion
+  * Searching
+  * Transversal
+ * Linked List
+   * Insertion
+   * Deletion
+   * Searching
+
+All algorithms has an animated visualization which also includes a commented pseudo code explanation of the algorithm. It also specifies the space time complexity of each operation.
