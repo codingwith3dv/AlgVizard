@@ -8,7 +8,6 @@ which includes:
   * Bubble Sort
   * Quick Sort
   * Merge Sort
-  * Insertion Sort
   * Selection Sort
 * Binary Search Trees
   * Insertion
@@ -19,5 +18,6 @@ which includes:
    * Insertion
    * Deletion
    * Searching
+   * Transversal
 
 All algorithms has an animated visualization which also includes a commented pseudo code explanation of the algorithms. It also specifies the space time complexity of each operation.
