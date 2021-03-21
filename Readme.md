@@ -9,9 +9,7 @@ which includes:
   * Quick Sort
   * Merge Sort
   * Insertion Sort
-  * Radix Sort
   * Selection Sort
-  * Heap Sort
 * Binary Search Trees
   * Insertion
   * Deletion
