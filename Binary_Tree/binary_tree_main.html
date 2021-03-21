@@ -23,8 +23,8 @@
     
     <div class = "tabContainer">
         <div class = "tab">
-            <button class = "tablinks" id = "insert" onclick = "openTab(event, 'InsertAlg')">Insertion</button>
-            <button class = "tablinks" id = "delete" onclick = "openTab(event, 'DeleteAlg')">Deletion</button>
+            <button class = "tablinks" id = "insertbt" onclick = "openTab(event, 'InsertAlg')">Insertion</button>
+            <button class = "tablinks" id = "deletebt" onclick = "openTab(event, 'DeleteAlg')">Deletion</button>
         </div>
         
         <div class = "codeContainer tabcontent" id = "InsertAlg">
@@ -42,6 +42,9 @@
     <script src="./TreeNode.js"></script>
     <script src="./BinaryTree.js"></script>
     <script src="./binary_tree_main.js"></script>
+    <script>
+        document.getElementById('insertbt').click()
+    </script>
 </body>
 
 </html>

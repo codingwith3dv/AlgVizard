@@ -4,6 +4,23 @@ var inputtext = document.getElementById('inputnum')
 var container = document.getElementById('treeContainer')
 var svg = "http://www.w3.org/2000/svg";
 
+function openTab(evt, name) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(name).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
 function drawNode(node, node2) {
     var container2 = document.createElementNS(svg, 'g')
     var circle = document.createElementNS(svg, 'circle')
@@ -44,6 +61,7 @@ var tree = new BST();
 
 insertButton.onclick = () => {
     i = parseInt(inputtext.value);
+    document.getElementById('insertbt').click()
     if (inputtext.value) {
         tree.add(i);
         tree.update()
@@ -54,6 +72,7 @@ insertButton.onclick = () => {
 
 deleteButton.onclick = () => {
     i = parseInt(inputtext.value);
+    document.getElementById('deletebt').click()
     if (inputtext.value) {
         tree.delete(i);
         tree.update()
