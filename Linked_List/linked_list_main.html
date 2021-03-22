@@ -43,7 +43,19 @@ return head</pre>
         <div class="codeContainer tabcontent" id="DeleteAlg">
             <pre>
 //Delete
-//takes in a value to delete</pre>
+//takes in a value to delete
+if head.data equals value
+    head = head.next
+else
+    lastNode = head
+    currentNode = head.next
+    
+    while currentNode not equals null
+        if currentNode.data equals value
+            lastNode.next = currentNode.next
+        else
+            lastNode = currentNode
+            currentNode = currentNode.next</pre>
         </div> 
     </div>
     
