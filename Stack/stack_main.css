@@ -56,3 +56,33 @@ input[type=number]:focus {
     background-color: #cc13ffff;
     color: white;
 }
+
+#stackContainer {
+    width: auto;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 5px;
+    background-color: #E2E2E2;
+    margin: 10px;
+}
+
+#element{
+    width: auto;
+    height: 10%;
+    margin: 5px;
+    animation-name: expand;
+    animation-duration: 1s;
+    background-color: black;
+}
+
+@keyframes expand {
+    from {
+        transform: translateX(-100%);
+    }
+    
+    to {
+        transform: translateX(0%);
+    }
+}
