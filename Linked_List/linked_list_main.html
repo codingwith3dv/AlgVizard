@@ -20,16 +20,30 @@
     
     <div class="tabContainer" id="tabContainer">
         <div class="tab">
-            <button class="tablinks" id="insertbt" onclick="openTab(event, 'InsertAlg')">Insertion</button>
+            <button class="tablinks" id="insertbt" onclick="openTab(event, 'InsertAlg')">Add</button>
             <button class="tablinks" id="deletebt" onclick="openTab(event, 'DeleteAlg')">Deletion</button>
         </div>
         <div class="codeContainer tabcontent" id="InsertAlg">
             <pre>
-//Append</pre>
+//Add
+//takes in a new node to insert
+if head equals null or head.data &gt= newNode.data
+    newNode.next = head
+    head = newNode
+    return head
+
+currentNode = head
+while currentNode.next is not null and currentNode.next.data < newNode.data
+    currentNode = currentNode.next
+    
+newNode.next = currentNode.next
+currentNode.next = newNode
+return head</pre>
         </div>
         <div class="codeContainer tabcontent" id="DeleteAlg">
             <pre>
-//Delete</pre>
+//Delete
+//takes in a value to delete</pre>
         </div> 
     </div>
     

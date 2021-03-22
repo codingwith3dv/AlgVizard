@@ -49,7 +49,7 @@ LinkedList.prototype.animateDeleteNode = function(index) {
 LinkedList.prototype.animateNodesForInsert = function(fromNode, toNode) {
     return new Promise(resolve => {
         for (let i = fromNode; i < toNode; i++) {
-            
+
             nodes[i].style.animation =
                 "moveRightNode " +
                 800 / 1000 + "s " +
@@ -73,7 +73,7 @@ LinkedList.prototype.animateNodesForInsert = function(fromNode, toNode) {
 LinkedList.prototype.animateNodesForDelete = function(fromNode) {
     return new Promise(resolve => {
         for (let i = fromNode; i < nodes.length; i++) {
-            
+
             nodes[i].style.animation =
                 "moveLeftNode " +
                 1000 / 1000 + "s " +
@@ -101,7 +101,6 @@ LinkedList.prototype.getIndex = function(item) {
             return count;
         }
     }
-    return -1;
 }
 
 LinkedList.prototype.addNode = function(data) {
@@ -126,22 +125,31 @@ LinkedList.prototype.addNode = function(data) {
 }
 
 LinkedList.prototype.deleteNode = async function(data) {
-    if(this.head.data === data) {
-        this.head = this.head.next;
-        await this.animateDeleteNode(this.getIndex(this.head), data);
+    if (this.head === null) {
+        return;
+    }
+
+    if (this.head.data === data) {
+        await this.animateDeleteNode(this.getIndex(this.head));
         await this.animateNodesForDelete(this.getIndex(this.head));
-        return this.head;
+        this.head = this.head.next;
+        return;
+    } else {
+        var save = this.head;
+        var ptr = this.head.next;
+        
+        while(ptr !== null) {
+            if(ptr.data === data) {
+                await this.animateDeleteNode(this.getIndex(ptr))
+                await this.animateNodesForDelete(this.getIndex(ptr))
+                save.next = ptr.next;
+                return;
+            }else {
+                save = ptr;
+                ptr = ptr.next;
+            }
+        }
     }
-    
-    var current = this.head;
-    while(current.next !== null && current.data !== data) {
-        current = current.next;
-    }
-    
-    //current = current.next;
-    await this.animateDeleteNode(this.getIndex(current), data);
-    await this.animateNodesForDelete(this.getIndex(current)); 
-    return this.head;
 }
 
 LinkedList.prototype.add = async function(index, data) {
