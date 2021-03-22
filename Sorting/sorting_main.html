@@ -11,15 +11,13 @@
     <div class="nav">
         <div class="mainNav"></div>
         <div class="controls">
-            <div class="dropDown">
-                <select id="selectAlg" onclick="checkIfDropIsValid();">
-                    <option>Bubble Sort</option>
-                    <option>Quick Sort</option>
-                    <option>Merge Sort</option>
-                    <option>Selection Sort</option>
-                </select>
-                <button id="startButton">Sort</button>
-            </div>
+            <select id="selectAlg" onclick="checkIfDropIsValid();">
+                <option>Bubble Sort</option>
+                <option>Quick Sort</option>
+                <option>Merge Sort</option>
+                <option>Selection Sort</option>
+            </select>
+            <button id="startButton">Sort</button>
             <p class="value" id="value">Number Of Bars: 100</p>
             <input id="size" type="range" min=20 max=100 step=1 value=20>
             <button id="alg">Alg</button>
@@ -106,7 +104,6 @@ for k = 0 to array_length
     
 return array</pre>
         </div>
-        
         <div class="codeContainer tabcontent" id="SelectionSortAlg">
             <pre>
 //Selection sort
@@ -124,7 +121,7 @@ for i = 0 to array length
         <script type="text/javascript" src="./scripts/bubble_sort.js"></script>
         <script type="text/javascript" src="./scripts/merge_sort.js"></script>
         <script type="text/javascript" src="./scripts/quick_sort.js"></script>
-        <script type="text/javascript" src="./scripts/selection_sort.js"></script> 
+        <script type="text/javascript" src="./scripts/selection_sort.js"></script>
         <script type="text/javascript" src="./scripts/sorting_main.js"></script>
         <script>
             var content = document.getElementById('tabContainer');

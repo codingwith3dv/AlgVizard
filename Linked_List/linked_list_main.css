@@ -8,6 +8,7 @@
     display: block;
     height: auto;
     padding: 3%;
+    position: relative;
     color: #FFF;
     box-sizing: border-box;
     transition: 0.2s all ease-in-out;
@@ -284,7 +285,7 @@ pre {
 .tabContainer {
     margin: 3%;
     width: 94%;
-    z-index: 1;
+    z-index: 2;
     height: 12.8vh;
     padding: 2px;
     display: none;
@@ -292,7 +293,7 @@ pre {
     position: absolute;
 }
 
-#alg {
+#algll {
     position: absolute;
     outline: none;
     border: none;

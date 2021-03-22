@@ -15,13 +15,48 @@
             <button class="buttonsll" id="appendll">Append</button>
             <button class="buttonsll" id="deletell">Delete</button>
         </div>
+        <button id="algll">Alg</button>
+    </div>
+    
+    <div class="tabContainer" id="tabContainer">
+        <div class="tab">
+            <button class="tablinks" id="insertbt" onclick="openTab(event, 'InsertAlg')">Insertion</button>
+            <button class="tablinks" id="deletebt" onclick="openTab(event, 'DeleteAlg')">Deletion</button>
+        </div>
+        <div class="codeContainer tabcontent" id="InsertAlg">
+            <pre>
+//Append</pre>
+        </div>
+        <div class="codeContainer tabcontent" id="DeleteAlg">
+            <pre>
+//Delete</pre>
+        </div> 
     </div>
     
     <div id="list">
     </div>
+    
     <script src="./LinkNode.js"></script>
     <script src="./LinkedList.js"></script>
     <script src="./linked_list_main.js"></script>
+    <script>
+        document.getElementById('insertbt').click()
+        var content = document.getElementById('tabContainer');
+        var algButton = document.getElementById('algll');
+
+        algButton.onclick = () => {
+            if (content.style.display === "block") {
+                content.style.animation = 'disappear 1s ease'
+                setTimeout(() => {
+                    content.style.animation = null;
+                    content.style.display = "none";
+                }, 1000)
+            } else {
+                content.style.animation = 'appear 1s ease'
+                content.style.display = "block";
+            }
+        } 
+    </script> 
 </body>
 
 </html>

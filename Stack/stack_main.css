@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+}
+
+#controlsforstack {
+    width: 100%;
+    display: block;
+    height: auto;
+    padding: 3%;
+    color: #FFF;
+    box-sizing: border-box;
+    transition: 0.2s all ease-in-out;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+input[type=number] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 1.2em;
+    margin: 0%;
+    outline: none;
+    border-radius: 10px;
+    border: 2px solid #cc13ff88;
+    transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+input[type=number]:focus {
+    border: 2px solid #cc13ffff;
+    box-shadow: 0 0 0 .1rem #cc13ff88;
+}
+
+.buttonGroupstack {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.buttonsstack {
+    outline: none;
+    border: 1px solid #cc13ffff;
+    background-color: #FFFFFF00;
+    color: #FFFFFFAA;
+    margin-top: 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+    border-radius: 3px;
+}
+
+.buttonsstack:active {
+    box-shadow: 0 0 0 0.2rem #cc13ffff;
+    background-color: #cc13ffff;
+    color: white;
+}
