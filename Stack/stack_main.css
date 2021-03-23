@@ -2,9 +2,20 @@
     margin: 0;
 }
 
-::-webkit-scrollbar { 
-  width: 0px!important;
-} 
+::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background: #cc13ffff;
+}
 
 #controlsforstack {
     width: auto;
