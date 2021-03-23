@@ -23,7 +23,7 @@ ArrayStack.prototype.push = async function(value) {
 
         container.insertBefore(newStackElement, container.firstChild);
 
-        await this.animateBeforeInsert()
+        //await this.animateBeforeInsert()
         await this.insertNode(newStackElement);
     }
 }
@@ -62,12 +62,17 @@ ArrayStack.prototype.deleteNode = function(nodeToDelete) {
 
 ArrayStack.prototype.animateBeforeInsert = function() {
     return new Promise(resolve => {
-        var elements = document.getElementById('stackContainer').children;
-        for(var i = 0; i < elements.length; i++){
-            elements[i].style.animation = 'moveDown .5s ease';
-            setTimeout(() => {
-                elements[i].style.animation = null;
-            }, 500)
+        if(container.hasChildNodes()) {
+            let children = container.childNodes;
+            for(var k = 1; k < children.length; k++){
+                
+                children[k].style.animation = 'moveDown .5s ease';
+                
+                setTimeout(() => {
+                    children[k].style.animation = null;
+                }, 500)
+                
+            }
         }
         setTimeout(() => resolve(), 500)
     })

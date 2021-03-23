@@ -110,6 +110,6 @@ input[type=number]:focus {
     }
     
     to {
-        transform: translateY(120%);
+        transform: translateY(220%);
     }
 }
