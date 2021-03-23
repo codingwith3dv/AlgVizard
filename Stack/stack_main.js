@@ -1,4 +1,4 @@
-var stack = new ArrayStack(8);
+var stack = new ArrayStack(9);
 
 document.getElementById('pushstack').onclick = async() => {
     var value = document.getElementById('inputnumstack').value;

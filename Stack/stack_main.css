@@ -66,15 +66,18 @@ input[type=number]:focus {
     padding: 5px;
     background-color: #E2E2E2;
     margin: 10px;
+    vertical-align: top;
 }
 
 .element{
     width: auto;
     height: 10%;
     margin: 5px;
+    position: relative;
     border-radius: 10px;
     background-color: #cc13ffff;
     text-align: center;
+    transition: top 0.5s;
 }
 
 .elementValue {
