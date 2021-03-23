@@ -19,5 +19,9 @@ which includes:
    * Deletion
    * Searching
    * Transversal
+ * Stack
+   * Pushing
+   * Popping
+   * Peeking
 
 All algorithms has an animated visualization which also includes a commented pseudo code explanation of the algorithms. It also specifies the space time complexity of each operation.
