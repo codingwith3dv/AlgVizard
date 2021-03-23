@@ -30,6 +30,18 @@ input[type=number] {
     transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 input[type=number]:focus {
     border: 2px solid #cc13ffff;
     box-shadow: 0 0 0 .1rem #cc13ff88;
