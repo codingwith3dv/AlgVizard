@@ -2,6 +2,10 @@
     margin: 0;
 }
 
+::-webkit-scrollbar { 
+  width: 0px!important;
+} 
+
 #controlsforstack {
     width: auto;
     display: block;
