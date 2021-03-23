@@ -1,5 +1,22 @@
 var stack = new ArrayStack(9);
 
+function openTab(evt, name) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(name).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
 document.getElementById('pushstack').onclick = async() => {
     var value = document.getElementById('inputnumstack').value;
     value = parseFloat(value);
@@ -10,6 +27,6 @@ document.getElementById('popstack').onclick = async() => {
     var value = document.getElementById('inputnumstack').value;
     value = parseFloat(value);
     document.getElementById('popstack').disabled = true; 
-    await stack.pop(value)
+    await stack.pop()
     document.getElementById('popstack').disabled = false; 
 }

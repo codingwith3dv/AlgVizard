@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Stack</title>
-    <link rel="stylesheet" href="./stack_main.css"/>
+    <link rel="stylesheet" href="./stack_main.css" />
 </head>
 
 <body>
@@ -15,14 +15,42 @@
             <button class="buttonsstack" id="pushstack">Push</button>
             <button class="buttonsstack" id="popstack">Pop</button>
         </div>
+        <button id="alg">Alg</button>
     </div>
-    
     <div id="stackContainer">
-
     </div>
-    
+    <div class="tabContainer" id="tabContainer">
+        <div class="tab">
+            <button class="tablinks" id="insertbt" onclick="openTab(event, 'PushAlg')">Pushing</button>
+            <button class="tablinks" id="deletebt" onclick="openTab(event, 'PopAlg')">Popping</button>
+        </div>
+        <div class="codeContainer tabcontent" id="PushAlg">
+            <pre></pre>
+        </div>
+        <div class="codeContainer tabcontent" id="PopAlg">
+            <pre></pre>
+        </div>
+    </div>
     <script src="./Stack.js"></script>
     <script src="./stack_main.js"></script>
+    <script>
+        document.getElementById('insertbt').click()
+        var content = document.getElementById('tabContainer');
+        var algButton = document.getElementById('alg');
+
+        algButton.onclick = () => {
+            if (content.style.display === "block") {
+                content.style.animation = 'disappear 1s ease'
+                setTimeout(() => {
+                    content.style.animation = null;
+                    content.style.display = "none";
+                }, 1000)
+            } else {
+                content.style.animation = 'appear 1s ease'
+                content.style.display = "block";
+            }
+        }
+    </script>
 </body>
 
 </html>
