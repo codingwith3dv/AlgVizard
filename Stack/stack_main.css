@@ -148,6 +148,38 @@ input[type=number]:focus {
 
 
 
+pre {
+    color: #000;
+    page-break-inside: avoid;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    height: 25.6vh;
+    max-width: 100%;
+    border-radius: 10px;
+    overflow: scroll;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+}
+
+::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background: #cc13ffff;
+}
+
 .tab {
     overflow: hidden;
     display: flex;
@@ -191,8 +223,8 @@ input[type=number]:focus {
 .tabContainer {
     margin: 3%;
     width: 94%;
-    z-index: 1;
-    height: 12.8vh;
+    z-index: 2;
+    height: 25.6vh;
     padding: 2px;
     display: none;
     transition: opacity 0.5s ease-in-out;

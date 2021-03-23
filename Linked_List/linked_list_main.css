@@ -216,7 +216,7 @@ pre {
     font-size: 0.8rem;
     line-height: 1.6;
     margin-bottom: 1.6em;
-    height: 12.8vh;
+    height: 25.6vh;
     max-width: 100%;
     border-radius: 10px;
     overflow: scroll;
@@ -286,7 +286,7 @@ pre {
     margin: 3%;
     width: 94%;
     z-index: 2;
-    height: 12.8vh;
+    height: 25.6vh;
     padding: 2px;
     display: none;
     transition: opacity 0.5s ease-in-out;
