@@ -1,11 +1,15 @@
 var stack = new ArrayStack(8);
-stack.push(10);
-stack.push(20);
-stack.push(30);
-stack.push(40);
-stack.push(50);
 
-console.log(stack.pop());
-console.log(stack.pop());
-console.log(stack.pop());
-console.log(stack.pop());
+document.getElementById('pushstack').onclick = async() => {
+    var value = document.getElementById('inputnumstack').value;
+    value = parseFloat(value);
+    await stack.push(value)
+}
+
+document.getElementById('popstack').onclick = async() => {
+    var value = document.getElementById('inputnumstack').value;
+    value = parseFloat(value);
+    document.getElementById('popstack').disabled = true; 
+    await stack.pop(value)
+    document.getElementById('popstack').disabled = false; 
+}
