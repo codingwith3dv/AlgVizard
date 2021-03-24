@@ -4,6 +4,7 @@
 }
 
 a {
+    display: none;
     text-decoration: none;
     color: white;
 }
@@ -20,7 +21,6 @@ a :hover {
     background-color: #000000DD;
     color: white;
     text-align: left;
-    top: 0;
     padding: 1rem;
 }
 
@@ -114,12 +114,16 @@ a :hover {
 }
 
 .page {
-    width: 100%;
+    width: auto;
     height: auto;
     box-sizing: border-box;
     padding: 5px;
-    background: #F7F7F7;
+    background: #F2F2F2;
     position: relative;
+    scroll-snap-destination: top;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .pagetitle {

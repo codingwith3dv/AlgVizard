@@ -58,7 +58,7 @@ function generateArray() {
                  height: ${block_divs_value[i]}%; 
                  background-color: blue; 
                  width: ${(100 / array_length - (1 * margin))}%; 
-                 border-radius: 50px; 
+                 border-radius: 5px; 
                  transition: ${anim_speed}}s all ease-in-out;`;
         container.appendChild(block_divs[i]);
     }
@@ -71,7 +71,7 @@ function update_block(block, value, color) {
                 height: ${value}%; 
                 background-color: ${color};
                 width: ${(100 / array_length - (1 * margin))}%; 
-                border-radius: 50px; 
+                border-radius: 5px; 
                 transition: ${anim_speed}s all ease-in-out;`;
     }, time_interval += alg_speed)
 }
