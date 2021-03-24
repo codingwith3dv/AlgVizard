@@ -9,10 +9,10 @@
 </head>
 
 <body>
-    <a class="link" href="./Sorting/sorting_main.html">Sorting</a>
-    <a class="link" href="./Binary_Tree/binary_tree_main.html">Binary Tree</a>
-    <a class="link" href="./Linked_List/linked_list_main.html">Linked List</a>
-    <a class="link" href="./Stack/stack_main.html">Stack</a>
+    <a id="sort" href="./Sorting/sorting_main.html">Sorting</a>
+    <a id="bst" href="./Binary_Tree/binary_tree_main.html">Binary Tree</a>
+    <a id="linkedlist" href="./Linked_List/linked_list_main.html">Linked List</a>
+    <a id="stack" href="./Stack/stack_main.html">Stack</a>
     <div class="heading">
         <div class="name">
             AlgVizard
@@ -33,6 +33,37 @@
         </div>
         <p class="prev" onclick="pushSlides(-1)">&#10094</p>
         <p class="next" onclick="pushSlides(1)">&#10095</p>
+    </div>
+    
+    
+    <div class="page">
+        <p class="pagetitle">Sorting</p>
+        <p class="pagedesc">Various sorting techniques are used for
+            arranging data in either ascending or
+            descending order. In this section we visualize
+            these sorting algorithms - <br><br>
+            ° Bubble Sort<br>
+            ° Quick Sort<br>
+            ° Merge Sort<br>
+            ° Selection Sort<br><br>
+            These are the most commonly used sorting algorithms.
+            When we do a search on Google, the search engine
+            uses a complex sorting algorithm which is fast
+            and efficient. Then it sorts the websites and they are presented to us
+            <br><br>
+            The visualizer provides pseudocode for all the algorithms.
+        </p>
+        <button class="pagebutton" onclick="gotoNextPage(`sort`)">Go to Sorting
+        </button>
+    </div>
+    
+    <div class="page">
+        <p class="pagetitle">Binary Search Trees</p>
+        <p class="pagedesc">
+            
+        </p>
+        <button class="pagebutton" onclick="gotoNextPage(`bst`)">Go to BST
+        </button>
     </div>
     <script src="./main.js"></script>
 </body>

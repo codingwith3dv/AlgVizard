@@ -1,6 +1,10 @@
 var slideIndex = 1;
 showSlides(1)
 
+function gotoNextPage(id) {
+    document.getElementById(id).click();
+}
+
 function pushSlides(n) {
     showSlides(slideIndex += n);
 }
