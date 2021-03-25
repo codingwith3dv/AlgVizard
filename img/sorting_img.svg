@@ -9,8 +9,8 @@
 	enable-background="new 0 0 24.0 24.0"
 	xml:space="preserve">
 	<path
-		fill="#CC12FF"
-		fill-opacity="0.545"
+		fill="#CC13FF"
+		fill-opacity="1.000"
 		fill-rule="nonzero"
 		stroke="#000000"
 		stroke-opacity="1.000"
@@ -24,48 +24,48 @@
 		fill-rule="nonzero"
 		stroke="#FFFFFF"
 		stroke-opacity="1.000"
-		stroke-width="4.008"
+		stroke-width="3.72"
 		stroke-linejoin="miter"
-		stroke-linecap="square"
-		d="M7.28,9.49L7.30,21.49"/>
+		stroke-linecap="round"
+		d="M2.80,2.74L2.78,21.51"/>
 	<path
 		fill="#FFFFFF"
 		fill-opacity="1.000"
 		fill-rule="nonzero"
 		stroke="#FFFFFF"
 		stroke-opacity="1.000"
-		stroke-width="4.008"
+		stroke-width="3.72"
 		stroke-linejoin="miter"
-		stroke-linecap="square"
-		d="M12.00,4.61L11.92,21.42"/>
+		stroke-linecap="round"
+		d="M7.32,5.51L7.35,21.51"/>
 	<path
 		fill="#FFFFFF"
 		fill-opacity="1.000"
 		fill-rule="nonzero"
 		stroke="#FFFFFF"
 		stroke-opacity="1.000"
-		stroke-width="4.008"
+		stroke-width="3.72"
 		stroke-linejoin="miter"
-		stroke-linecap="square"
-		d="M16.68,6.89L16.66,21.36"/>
+		stroke-linecap="round"
+		d="M11.99,8.21L11.93,21.51"/>
 	<path
 		fill="#FFFFFF"
 		fill-opacity="1.000"
 		fill-rule="nonzero"
 		stroke="#FFFFFF"
 		stroke-opacity="1.000"
-		stroke-width="4.008"
+		stroke-width="3.72"
 		stroke-linejoin="miter"
-		stroke-linecap="square"
-		d="M21.58,5.82L21.46,21.34"/>
+		stroke-linecap="round"
+		d="M16.52,10.55L16.54,21.51"/>
 	<path
 		fill="#FFFFFF"
 		fill-opacity="1.000"
 		fill-rule="nonzero"
 		stroke="#FFFFFF"
 		stroke-opacity="1.000"
-		stroke-width="4.008"
+		stroke-width="3.72"
 		stroke-linejoin="miter"
-		stroke-linecap="square"
-		d="M2.71,2.70L2.73,21.49"/>
+		stroke-linecap="round"
+		d="M21.27,13.23L21.22,21.51"/>
 </svg>
