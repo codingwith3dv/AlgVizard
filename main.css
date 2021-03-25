@@ -118,7 +118,7 @@ a :hover {
     width: auto;
     height: auto;
     box-sizing: border-box;
-    padding: 5px;
+    padding: 20px;
     background: #F2F2F2;
     position: relative;
     scroll-snap-destination: top;
@@ -129,9 +129,10 @@ a :hover {
 
 .pagetitle {
     color: black;
-    margin: 20px;
+    margin: 0px;
     position: relative;
     font-size: 2rem;
+    opacity: .9;
     box-sizing: border-box;
     width: auto;
     font-weight: bolder;
@@ -141,13 +142,11 @@ a :hover {
 .pagedesc {
     color: black;
     position: relative;
-    opacity: 1;
+    opacity: .8;
     font-weight: bolder;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
 .pageimage {
@@ -156,9 +155,9 @@ a :hover {
     float: left;
     border-radius: 8px;
     box-shadow: 0 0 10px #cc13ff;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-top: 20px;
     margin-bottom: 10px;
+    margin-right: 20px;
 }
 
 .pagebutton {
@@ -167,7 +166,6 @@ a :hover {
     color: white;
     font-size: 1rem;
     font-weight: bolder;
-    margin: 20px;
     padding: 7px;
     outline: none;
     width: auto;
@@ -175,6 +173,7 @@ a :hover {
     border-radius: 5px;
     border: none;
     box-shadow: 0 3px 5px #000;
+    margin-top: 20px;
 }
 
 .pagebutton:hover {
