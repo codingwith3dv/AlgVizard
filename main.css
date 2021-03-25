@@ -46,6 +46,7 @@ a :hover {
     position: relative;
     margin: 20px;
     height: 400px;
+    display: none;
     background-color: #F2F2F2;
     border-radius: 20px;
     box-sizing: border-box;
@@ -135,17 +136,25 @@ a :hover {
     width: auto;
     font-weight: bolder;
     font-family: Arial, Helvetica, sans-serif;
-    border-bottom: 2px solid black;
 }
 
 .pagedesc {
     color: black;
     position: relative;
-    opacity: .9;
+    opacity: 1;
     font-weight: bolder;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     margin: 20px;
+}
+
+.pageimage {
+    width: 35%;
+    height: 35%;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .pagebutton {
@@ -155,7 +164,6 @@ a :hover {
     font-size: 1rem;
     font-weight: bolder;
     margin: 20px;
-    bottom: 10px;
     padding: 7px;
     outline: none;
     width: auto;
