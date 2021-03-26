@@ -20,3 +20,7 @@ function showSlides(n) {
     
     slides[slideIndex-1].style.display = "block";
 }
+
+function gotoPage(id) {
+    document.getElementById(id).click()
+}
