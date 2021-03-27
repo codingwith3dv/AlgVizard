@@ -13,7 +13,7 @@
     <div id="controlsforll">
         <input type="number" id="inputnumll" placeholder="Enter a digit" aria-label="Enter a digit" />
         <div class="buttonGroupll">
-            <button class="buttonsll" id="appendll">Append</button>
+            <button class="buttonsll" id="appendll">Insert</button>
             <button class="buttonsll" id="deletell">Delete</button>
             <button class="buttonsll" id="searchll">Search</button>
             <button class="buttonsll" id="transversell">Traverse</button>
@@ -31,6 +31,7 @@
         <div class="codeContainer tabcontent" id="InsertAlg">
             <pre>
 //Add
+// Big O notation: O(1)
 //takes in a new node to insert
 if head equals null or head.data &gt= newNode.data
     newNode.next = head
@@ -48,6 +49,7 @@ return head</pre>
         <div class="codeContainer tabcontent" id="DeleteAlg">
             <pre>
 //Delete
+// Big O notation: O(1)
 //takes in a value to delete
 if head.data equals value
     head = head.next
@@ -65,6 +67,8 @@ else
         
         <div class="codeContainer tabcontent" id="SearchAlg">
             <pre>
+//Searching
+// Big O notation: O(n)
 //takes in head and value to search
 currentNode = head
 while currentNode not equals null
@@ -75,6 +79,8 @@ while currentNode not equals null
         
         <div class="codeContainer tabcontent" id="TraverseAlg">
             <pre>
+//Traversal
+// Big O notation: O(n)
 //takes in head
 if head equals null
     return
