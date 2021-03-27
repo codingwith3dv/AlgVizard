@@ -1,6 +1,10 @@
 # Algorithm visualizer
-This is an algorithm visualizer made for the theme `Visualization` in Tech With Tim Code jam
+This website is an algorithm visualizer which will help
+people to understand algorithms by visualizing them. 
 
+This website is made for the theme `Visualization` in Tech With Tim Code jam hosted at 2021 March
+
+## Features
 It can give you a basic understanding of algorithms
 which includes:
 
