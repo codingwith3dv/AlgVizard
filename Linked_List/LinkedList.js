@@ -158,7 +158,7 @@ LinkedList.prototype.searchNode = async function(value) {
         var index = this.getIndex(current);
         await this.animateNodes(0,index-1)
         if (current.data === value) {
-            alert('Value found at index ' + (index+1));
+            Alert.render('Value found at index ' + (index+1));
             break;
         }
         current = current.next;
@@ -169,10 +169,10 @@ LinkedList.prototype.transverse = async function() {
     var current = this.head;
     var result = ''
     while(current !== null) {
-        result = result + current.data + ' '
+        result = result + current.data + ', '
         current = current.next;
     }
-    alert(result)
+    Alert.render(result)
 }
 
 LinkedList.prototype.add = async function(index, data) {

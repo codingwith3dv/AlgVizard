@@ -40,9 +40,10 @@ ArrayStack.prototype.pop = async function() {
 
 ArrayStack.prototype.peek = async function() {
     if (this.counter == -1) {
-        alert('Nothing here')
+        Alert.render('Nothing here')
+        return;
     }
-    alert(this.array[this.counter] + '');
+    Alert.render(this.array[this.counter] + '');
 }
 
 ArrayStack.prototype.insertNode = function(node) {

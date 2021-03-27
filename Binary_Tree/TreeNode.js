@@ -86,6 +86,21 @@ TreeNode.prototype.drawNodes = function(parentNode) {
     this.drawSelf(parentNode)
 
 }
+var result = ''
+TreeNode.prototype.traverse = function() {
+    if (this === null) return;
+
+    result = result + this.data + ', '; 
+
+    if (this.left !== null) {
+        this.left.traverse();
+    }
+    if (this.right !== null) {
+        this.right.traverse();
+    }
+    
+    Alert.render(result)
+}
 
 TreeNode.prototype.getLevels = function(parent) {
     if (parent === null) {

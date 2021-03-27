@@ -66,7 +66,7 @@ insertButton.onclick = () => {
         tree.add(i);
         tree.update()
     } else {
-        alert('Please enter some value')
+        Alert.render('Please enter some value')
     }
 }
 
@@ -77,8 +77,12 @@ deleteButton.onclick = () => {
         tree.delete(i);
         tree.update()
     } else {
-        alert('Please enter some value')
+        Alert.render('Please enter some value')
     }
+}
+
+document.getElementById('traverse').onclick = () => {
+    tree.traverse()
 }
 
 for (var i = 0; i < 4; i++) {

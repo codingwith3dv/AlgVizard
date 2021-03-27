@@ -17,6 +17,12 @@ BST.prototype.delete = function(data) {
     this.root = this.root.deleteNode(data);
 }
 
+BST.prototype.traverse = function() {
+    if(this.root === null) return;
+    result = 'Values are: '
+    this.root.traverse()
+}
+
 BST.prototype.draw = function() {
     container.innerHTML = ''
     if (this.root == null) return;
