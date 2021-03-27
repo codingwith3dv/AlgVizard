@@ -20,7 +20,7 @@
 
 @keyframes anim {
     from {
-        transform: scale(0) translate(-50%, -50%);
+        transform: scale(0) translate(-100%, -100%);
     }
     
     to {
