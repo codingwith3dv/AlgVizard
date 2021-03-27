@@ -180,10 +180,11 @@ LinkedList.prototype.add = async function(index, data) {
     node.classList.add('node');
 
     var nodedata = document.createElement('div');
+    nodedata.classList.add('dataNode')
 
     var text = document.createTextNode(data);
     nodedata.appendChild(text);
-    node.appendChild(nodedata)
+    node.appendChild(nodedata);
 
     var pointer = document.createElement('div');
     pointer.classList.add('pointers');
@@ -194,6 +195,7 @@ LinkedList.prototype.add = async function(index, data) {
     image.classList.add('image')
 
     pointer.appendChild(image)
+    
 
     if (index === nodes.length) {
         await this.animateNodes(0, nodes.length - 1);

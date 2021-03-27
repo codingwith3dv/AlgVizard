@@ -20,6 +20,11 @@ function openTab(evt, name) {
 document.getElementById('pushstack').onclick = async() => {
     var value = document.getElementById('inputnumstack').value;
     value = parseFloat(value);
+    if(isNaN(value)) {
+        Alert.render('Please enter some value')
+        return;
+    }
+    document.getElementById('inputnumstack').value = ''
     document.getElementById('insertbt').click()
     await stack.push(value)
 }
@@ -30,6 +35,7 @@ document.getElementById('popstack').onclick = async() => {
     document.getElementById('deletebt').click()
     document.getElementById('popstack').disabled = true; 
     await stack.pop()
+    document.getElementById('inputnumstack').value = ''
     document.getElementById('popstack').disabled = false; 
 }
 

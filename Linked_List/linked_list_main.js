@@ -22,7 +22,12 @@ function openTab(evt, name) {
 document.getElementById('appendll').onclick = async() => {
     var value = document.getElementById('inputnumll').value;
     value = parseFloat(value)
+    if (isNaN(value)) {
+        Alert.render('Please enter some value')
+        return;
+    }
     document.getElementById('insertbt').click()
+    document.getElementById('inputnumll').value = ''
     linkedlist.addNode(value)
 }
 
@@ -30,12 +35,14 @@ document.getElementById('deletell').onclick = async() => {
     var value = document.getElementById('inputnumll').value;
     value = parseFloat(value)
     document.getElementById('deletebt').click()
+    document.getElementById('inputnumll').value = ''
     linkedlist.deleteNode(value)
 }
 
 document.getElementById('searchll').onclick = async() => {
     var value = document.getElementById('inputnumll').value;
     value = parseFloat(value);
+    document.getElementById('inputnumll').value = ''
     linkedlist.searchNode(value)
 }
 

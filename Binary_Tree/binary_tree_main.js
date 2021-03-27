@@ -65,6 +65,7 @@ insertButton.onclick = () => {
     if (inputtext.value) {
         tree.add(i);
         tree.update()
+        document.getElementById('inputnum').value = ''
     } else {
         Alert.render('Please enter some value')
     }
@@ -76,6 +77,7 @@ deleteButton.onclick = () => {
     if (inputtext.value) {
         tree.delete(i);
         tree.update()
+        document.getElementById('inputnum').value = ''
     } else {
         Alert.render('Please enter some value')
     }
