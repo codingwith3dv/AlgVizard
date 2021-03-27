@@ -34,6 +34,10 @@ document.getElementById('appendll').onclick = async() => {
 document.getElementById('deletell').onclick = async() => {
     var value = document.getElementById('inputnumll').value;
     value = parseFloat(value)
+    if (isNaN(value)) {
+        Alert.render('Please enter some value')
+        return;
+    }
     document.getElementById('deletebt').click()
     document.getElementById('inputnumll').value = ''
     linkedlist.deleteNode(value)

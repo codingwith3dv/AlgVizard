@@ -33,10 +33,6 @@ document.getElementById('popstack').onclick = async() => {
     var value = document.getElementById('inputnumstack').value;
     value = parseFloat(value);
     document.getElementById('deletebt').click()
-    if (isNaN(value)) {
-        Alert.render('Please enter some value')
-        return;
-    }
     document.getElementById('popstack').disabled = true; 
     await stack.pop()
     document.getElementById('inputnumstack').value = ''
