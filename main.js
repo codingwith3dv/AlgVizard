@@ -22,5 +22,5 @@ function showSlides(n) {
 }
 
 function gotoPage(id) {
-    document.getElementById(id).click()
+    document.getElementById(id).click();
 }

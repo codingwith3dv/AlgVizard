@@ -32,3 +32,13 @@ document.getElementById('deletell').onclick = async() => {
     document.getElementById('deletebt').click()
     linkedlist.deleteNode(value)
 }
+
+document.getElementById('searchll').onclick = async() => {
+    var value = document.getElementById('inputnumll').value;
+    value = parseFloat(value);
+    linkedlist.searchNode(value)
+}
+
+document.getElementById('transversell').onclick = async() => {
+    linkedlist.transverse()
+}

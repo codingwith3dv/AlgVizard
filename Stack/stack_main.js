@@ -32,3 +32,7 @@ document.getElementById('popstack').onclick = async() => {
     await stack.pop()
     document.getElementById('popstack').disabled = false; 
 }
+
+document.getElementById('peekstack').onclick = async() => {
+    stack.peek()
+}

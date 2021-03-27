@@ -38,6 +38,13 @@ ArrayStack.prototype.pop = async function() {
     return res;
 }
 
+ArrayStack.prototype.peek = async function() {
+    if (this.counter == -1) {
+        alert('Nothing here')
+    }
+    alert(this.array[this.counter] + '');
+}
+
 ArrayStack.prototype.insertNode = function(node) {
     return new Promise(resolve => {
         node.style.animation = 'slide 0.5s ease';

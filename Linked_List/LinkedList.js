@@ -152,6 +152,29 @@ LinkedList.prototype.deleteNode = async function(data) {
     }
 }
 
+LinkedList.prototype.searchNode = async function(value) {
+    var current = this.head;
+    while(current !== null) {
+        var index = this.getIndex(current);
+        await this.animateNodes(0,index-1)
+        if (current.data === value) {
+            alert('Value found at index ' + (index+1));
+            break;
+        }
+        current = current.next;
+    }
+}
+
+LinkedList.prototype.transverse = async function() {
+    var current = this.head;
+    var result = ''
+    while(current !== null) {
+        result = result + current.data + ' '
+        current = current.next;
+    }
+    alert(result)
+}
+
 LinkedList.prototype.add = async function(index, data) {
     var node = document.createElement('div');
     node.classList.add('node');
