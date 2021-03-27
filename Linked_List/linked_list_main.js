@@ -42,6 +42,7 @@ document.getElementById('deletell').onclick = async() => {
 document.getElementById('searchll').onclick = async() => {
     var value = document.getElementById('inputnumll').value;
     value = parseFloat(value);
+    document.getElementById('searchbt').click()
     if (isNaN(value)) {
         Alert.render('Please enter some value')
         return;
@@ -51,5 +52,6 @@ document.getElementById('searchll').onclick = async() => {
 }
 
 document.getElementById('transversell').onclick = async() => {
+    document.getElementById('traversebt').click()
     linkedlist.transverse()
 }

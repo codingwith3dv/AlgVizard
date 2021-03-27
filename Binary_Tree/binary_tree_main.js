@@ -84,6 +84,7 @@ deleteButton.onclick = () => {
 }
 
 document.getElementById('traverse').onclick = () => {
+    document.getElementById('traversebt').click()
     tree.traverse()
 }
 

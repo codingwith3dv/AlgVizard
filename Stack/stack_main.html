@@ -25,6 +25,7 @@
         <div class="tab">
             <button class="tablinks" id="insertbt" onclick="openTab(event, 'PushAlg')">Pushing</button>
             <button class="tablinks" id="deletebt" onclick="openTab(event, 'PopAlg')">Popping</button>
+            <button class="tablinks" id="peekbt" onclick="openTab(event, 'PeekAlg')">Peeking</button>
         </div>
         <div class="codeContainer tabcontent" id="PushAlg">
             <pre>
@@ -41,6 +42,15 @@ if counter + 1 < array length
 if counter equals -1
     return 0
 return array[counter--]</pre>
+        </div>
+        
+        <div class="codeContainer tabcontent" id="PeekAlg">
+            <pre>
+//Peeking 
+//takes in nothing return value in top node
+if counter equals -1
+    return -1
+return array[counter]</pre>
         </div>
     </div>
     

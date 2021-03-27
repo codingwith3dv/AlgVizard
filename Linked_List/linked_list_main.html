@@ -25,6 +25,8 @@
         <div class="tab">
             <button class="tablinks" id="insertbt" onclick="openTab(event, 'InsertAlg')">Add</button>
             <button class="tablinks" id="deletebt" onclick="openTab(event, 'DeleteAlg')">Deletion</button>
+            <button class="tablinks" id="searchbt" onclick="openTab(event, 'SearchAlg')">Searching</button>
+            <button class="tablinks" id="traversebt" onclick="openTab(event, 'TraverseAlg')">Traversal</button>
         </div>
         <div class="codeContainer tabcontent" id="InsertAlg">
             <pre>
@@ -60,6 +62,29 @@ else
             lastNode = currentNode
             currentNode = currentNode.next</pre>
         </div> 
+        
+        <div class="codeContainer tabcontent" id="SearchAlg">
+            <pre>
+//takes in head and value to search
+currentNode = head
+while currentNode not equals null
+    if currentNode equals value
+        return currentNode
+    currentNode = currentNode.next</pre>
+        </div>
+        
+        <div class="codeContainer tabcontent" id="TraverseAlg">
+            <pre>
+//takes in head
+if head equals null
+    return
+currentNode = head
+while currentNode not equals null 
+    result = result + currentNode.data + " "
+    currentNode = currentNode.next
+    
+return result</pre>
+        </div>
     </div>
     
     <div id="list">
