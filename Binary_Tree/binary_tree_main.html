@@ -32,6 +32,7 @@
         <div class="codeContainer tabcontent" id="InsertAlg">
             <pre>
 //Insertion in binary tree
+// Big O notation: O(height of BST)
 //takes in a node to insert as val and the root element
 if newNode.data &lt root.data
     if root.left is null
@@ -47,6 +48,7 @@ else
         <div class="codeContainer tabcontent" id="DeleteAlg">
             <pre>
 //Deletion in binary tree
+// Big O notation: O(height of BST)
 //takes in value to delete and a root node
 if value &lt root.data
     root.left = recursively call self(value, root.left)
@@ -76,6 +78,8 @@ else
         
         <div class="codeContainer tabcontent" id="TraverseAlg">
             <pre>
+//Traversal
+// Big O notation: O(n²)
 //returns all the values in a tree
 //takes in root element
 if root equals null 

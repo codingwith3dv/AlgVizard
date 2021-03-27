@@ -1,5 +1,5 @@
-# Algorithm visualizer
-This website is an algorithm visualizer which will help
+# AlgVizard
+AlgVizard is an algorithm visualizer which will help
 people to understand algorithms by visualizing them. 
 
 This website is made for the theme `Visualization` in Tech With Tim Code jam hosted at 2021 March
@@ -16,16 +16,15 @@ which includes:
 * Binary Search Trees
   * Insertion
   * Deletion
+  * Transversal
+* Linked List
+  * Insertion
+  * Deletion
   * Searching
   * Transversal
- * Linked List
-   * Insertion
-   * Deletion
-   * Searching
-   * Transversal
- * Stack
-   * Pushing
-   * Popping
-   * Peeking
+* Stack
+  * Pushing
+  * Popping
+  * Peeking
 
-All algorithms has an animated visualization which also includes a commented pseudo code explanation of the algorithms. It also specifies the space time complexity of each operation.
+All algorithms has an animated visualization which also includes a commented pseudo code explanation of the algorithms. It also specifies the Big O Notation of each operation.
