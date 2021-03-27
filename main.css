@@ -153,8 +153,8 @@ a :hover {
 }
 
 .pageimage {
-    width: 25%;
-    height: 25%;
+    width: fit-content;
+    height: fit-content;
     float: left;
     border-radius: 8px;
     box-shadow: 0 0 10px #cc13ff;
