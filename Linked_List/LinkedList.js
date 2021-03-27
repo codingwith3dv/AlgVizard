@@ -154,6 +154,7 @@ LinkedList.prototype.deleteNode = async function(data) {
 
 LinkedList.prototype.searchNode = async function(value) {
     var current = this.head;
+    
     while(current !== null) {
         var index = this.getIndex(current);
         await this.animateNodes(0,index-1)
@@ -166,10 +167,14 @@ LinkedList.prototype.searchNode = async function(value) {
 }
 
 LinkedList.prototype.transverse = async function() {
+    if(this.head == null) {
+        Alert.render('Nothing to show')
+        return;
+    }
     var current = this.head;
     var result = ''
     while(current !== null) {
-        result = result + current.data + ', '
+        result = result + current.data + ' '
         current = current.next;
     }
     Alert.render(result)

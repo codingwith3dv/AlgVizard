@@ -42,6 +42,10 @@ document.getElementById('deletell').onclick = async() => {
 document.getElementById('searchll').onclick = async() => {
     var value = document.getElementById('inputnumll').value;
     value = parseFloat(value);
+    if (isNaN(value)) {
+        Alert.render('Please enter some value')
+        return;
+    }
     document.getElementById('inputnumll').value = ''
     linkedlist.searchNode(value)
 }

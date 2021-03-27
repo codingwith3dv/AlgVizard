@@ -69,7 +69,7 @@ input[type=number]:focus {
     outline: none;
     border: 1px solid #cc13ffff;
     background-color: #FFFFFF00;
-    color: #FFFFFFAA;
+    color: #FFFFFF;
     margin-top: 10px;
     font-size: 0.8rem;
     font-weight: bold;

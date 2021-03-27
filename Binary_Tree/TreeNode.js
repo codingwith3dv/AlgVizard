@@ -90,7 +90,7 @@ var result = ''
 TreeNode.prototype.traverse = function() {
     if (this === null) return;
 
-    result = result + this.data + ', '; 
+    result = result + this.data + ' '; 
 
     if (this.left !== null) {
         this.left.traverse();
