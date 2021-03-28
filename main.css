@@ -312,3 +312,15 @@ a :hover {
     opacity: 1;
     background-color: #00000088;
 }
+
+
+@media ( min-width: 800px) {
+    .pagetitle {
+        font-size: 2.5rem;
+    }
+    
+    .pagedesc {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+}
