@@ -32,3 +32,10 @@ All algorithms has an animated visualization which also includes a commented pse
 ## Contributers
 This project is made by - 
 * Coding with 3DV
+
+## How to use
+Goto https://codingwith3dv.github.io/AlgVizard and there you have it
+
+## Note
+This project was made on a mobile phone but I made it 
+very responsive so it will also work fine in other devices
