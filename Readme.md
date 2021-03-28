@@ -28,3 +28,7 @@ which includes:
   * Peeking
 
 All algorithms has an animated visualization which also includes a commented pseudo code explanation of the algorithms. It also specifies the Big O Notation of each operation.
+
+## Contributers
+This project is made by - 
+* Coding with 3DV
