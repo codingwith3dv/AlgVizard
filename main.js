@@ -24,3 +24,9 @@ function showSlides(n) {
 function gotoPage(id) {
     document.getElementById(id).click();
 }
+
+function mainscrollToBottom() {
+    /*var scrollDiv = document.getElementById("about").offsetHeight;
+    window.scrollTo({ top: scrollDiv, behavior: 'smooth' });*/
+    window.scrollTo(0,document.querySelector("#about").scrollHeight);
+}
