@@ -129,11 +129,6 @@ LinkedList.prototype.deleteNode = async function(data) {
         return;
     }
 
-    if (this.searchNodeForDelete(data) === false) {
-        Alert.render('The value is not in list');
-        return;
-    }
-
     if (this.head.data === data) {
         await this.animateDeleteNode(this.getIndex(this.head));
         await this.animateNodesForDelete(this.getIndex(this.head));
@@ -155,6 +150,8 @@ LinkedList.prototype.deleteNode = async function(data) {
             }
         }
     }
+    
+    Alert.render('The value is not in list');
 }
 
 LinkedList.prototype.searchNode = async function(value) {
@@ -170,21 +167,6 @@ LinkedList.prototype.searchNode = async function(value) {
         current = current.next;
     }
     
-}
-
-LinkedList.prototype.searchNodeForDelete = async function(value) {
-    var current = this.head;
-    
-    while(current !== null) {
-        //var index = this.getIndex(current);
-        //await this.animateNodes(0,index-1)
-        if (current.data === value) {
-            //Alert.render('Value found at index ' + (index+1));
-            return true;
-        }
-        current = current.next;
-    }
-    return false;
 }
 
 LinkedList.prototype.transverse = async function() {
