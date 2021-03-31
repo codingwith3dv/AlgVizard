@@ -25,6 +25,8 @@ ArrayStack.prototype.push = async function(value) {
 
         //await this.animateBeforeInsert()
         await this.insertNode(newStackElement);
+    }else{
+        Alert.render('Stack size exceeded')
     }
 }
 
