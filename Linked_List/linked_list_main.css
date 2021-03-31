@@ -74,7 +74,7 @@ input[type=number]:focus {
     width: 95%;
     padding-left: 5%;
     margin: 2.5%;
-    height: 100px;
+    
     box-sizing: border-box;
     display: flex;
     background-color: #E2E2E2;
