@@ -163,7 +163,7 @@ a :hover {
     height: fit-content;
     float: left;
     border-radius: 8px;
-    box-shadow: 5px 5px 10px #cc13ff;
+    box-shadow: 0px 0px 10px #cc13ff;
     margin-top: 20px;
     margin-bottom: 10px;
     background-color: transparent;
