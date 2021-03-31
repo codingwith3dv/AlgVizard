@@ -16,6 +16,7 @@ which includes:
 * Binary Search Trees
   * Insertion
   * Deletion
+  * Searching
   * Transversal
 * Linked List
   * Insertion

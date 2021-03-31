@@ -23,6 +23,17 @@ BST.prototype.traverse = function() {
     this.root.traverse()
 }
 
+BST.prototype.search = function(value) {
+    var dummyRoot = this.root;
+    var found = dummyRoot.searchNode( this.root,value);
+    console.log(found);
+    if(found === true) {
+        Alert.render('Value found')
+    }else {
+        Alert.render('Value not found')
+    }
+}
+
 BST.prototype.draw = function() {
     container.innerHTML = ''
     if (this.root == null) return;

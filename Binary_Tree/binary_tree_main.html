@@ -15,6 +15,7 @@
         <div class="buttonGroup">
             <button class="buttons" id="insert">Insert</button>
             <button class="buttons" id="delete">Delete</button>
+            <button class="buttons" id="search">Search</button>  
             <button class="buttons" id="traverse">Traverse</button>
         </div>
         <button id="alg">Alg</button>
@@ -27,7 +28,8 @@
         <div class="tab">
             <button class="tablinks" id="insertbt" onclick="openTab(event, 'InsertAlg')">Insertion</button>
             <button class="tablinks" id="deletebt" onclick="openTab(event, 'DeleteAlg')">Deletion</button>
-            <button class="tablinks" id="traversebt" onclick="openTab(event, 'TraverseAlg')">Traversal</button>
+            <button class="tablinks" id="searchbt" onclick="openTab(event, 'SearchAlg')">Searching</button> 
+            <button class="tablinks" id="traversebt" onclick="openTab(event, 'TraverseAlg')">Traversal</button>  
         </div>
         <div class="codeContainer tabcontent" id="InsertAlg">
             <pre>
@@ -92,6 +94,25 @@ if root.right not equals null
     recursively call self(root.right) 
                     
 return result</pre>
+        </div>
+        
+        <div class="codeContainer tabcontent" id="SearchAlg">
+            <pre>
+//takes in root and value to search
+//returns found or not
+found = false
+while root not equals null and not found
+    if value &lt root.data
+        root = root.left;
+        found = recursively calls self(root, value);
+    else if value &gt root.data
+        root = root.right;
+        found = recursively calls self(root, value);
+    else 
+        found = true
+        break
+        
+return found</pre>
         </div>
         
     </div>

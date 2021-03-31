@@ -70,6 +70,25 @@ TreeNode.prototype.deleteNode = function(val) {
     }
 }
 
+TreeNode.prototype.searchNode = function(rootNode, value) {
+    var found = false;
+
+    while (rootNode !== null && !found) {
+        if (value < rootNode.data) {
+            rootNode = rootNode.left;
+            found = this.searchNode(rootNode, value);
+        } else if (value > rootNode.data) {
+            rootNode = rootNode.right;
+            found = this.searchNode(rootNode, value);
+        } else {
+            found = true;
+            break;
+        }
+    }
+    
+    return found;
+}
+
 TreeNode.prototype.drawNodes = function(parentNode) {
 
     if (this.left != null) {
@@ -90,7 +109,7 @@ var result = ''
 TreeNode.prototype.traverse = function() {
     if (this === null) return;
 
-    result = result + this.data + ' '; 
+    result = result + this.data + ' ';
 
     if (this.left !== null) {
         this.left.traverse();
@@ -98,7 +117,7 @@ TreeNode.prototype.traverse = function() {
     if (this.right !== null) {
         this.right.traverse();
     }
-    
+
     Alert.render(result)
 }
 

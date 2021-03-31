@@ -5,20 +5,20 @@ var container = document.getElementById('treeContainer')
 var svg = "http://www.w3.org/2000/svg";
 
 function openTab(evt, name) {
-  var i, tabcontent, tablinks;
+    var i, tabcontent, tablinks;
 
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
 
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
 
-  document.getElementById(name).style.display = "block";
-  evt.currentTarget.className += " active";
+    document.getElementById(name).style.display = "block";
+    evt.currentTarget.className += " active";
 }
 
 function drawNode(node, node2) {
@@ -88,11 +88,17 @@ document.getElementById('traverse').onclick = () => {
     tree.traverse()
 }
 
+document.getElementById('search').onclick = () => {
+    document.getElementById('searchbt').click()
+    tree.search(document.getElementById('inputnum').value);
+    document.getElementById('inputnum').value = ''
+}
+
 for (var i = 0; i < 4; i++) {
     tree.add(Math.floor(Math.random() * (99 - 5 + 1)) + 5)
     tree.update()
 }
 
-setInterval( async () => {
+setInterval(async () => {
     tree.draw()
-}, 1000/60)
+}, 1000 / 60)
