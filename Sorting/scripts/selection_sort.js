@@ -2,6 +2,7 @@ function selection_Sort() {
     time_interval = 0
     var pos = 0;
     document.getElementById('select').click()
+    
     for(var i = 0; i < array_length; i++) {
         var small = block_divs_value[i];
         pos = i;
@@ -19,9 +20,10 @@ function selection_Sort() {
         block_divs_value[pos] = block_divs_value[i]
         update_block(block_divs[i], block_divs_value[i], 'red')
         block_divs_value[i] = temp;
-    }
-    
-    for (var i = 0; i < array_length; i++) {
         update_block(block_divs[i], block_divs_value[i], 'green')
     }
+    
+    /*for (var i = 0; i < array_length; i++) {
+        update_block(block_divs[i], block_divs_value[i], 'green')
+    }*/
 }

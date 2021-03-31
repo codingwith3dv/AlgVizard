@@ -89,6 +89,9 @@ startButton.addEventListener("click", () => {
         var value = alg.options[alg.selectedIndex].text;
         console.log(value);
         alg.style.backgroundColor='#AAA'
+        
+        var start = 0;
+        
         switch (value) {
             case "Bubble Sort":
                 // code
@@ -110,6 +113,8 @@ startButton.addEventListener("click", () => {
                 break;
 
         }
+        
+        var end = 0;
         alg.disabled = true;
         start_enabled = false;
         startButton.innerText = "Generate"
