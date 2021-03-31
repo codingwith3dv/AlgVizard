@@ -1,6 +1,6 @@
 var stack = new ArrayStack(9);
 
-await stack.push(10)
+stack.push(10)
 
 function openTab(evt, name) {
   var i, tabcontent, tablinks;
