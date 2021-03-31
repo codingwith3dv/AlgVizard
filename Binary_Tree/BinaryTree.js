@@ -13,7 +13,15 @@ BST.prototype.add = function(data) {
 }
 
 BST.prototype.delete = function(data) {
-    if (this.root === null) return;
+    if (this.root === null) {
+        Alert.render('Tree empty')
+        return;
+    } 
+    
+    if (this.root.searchNode(this.root, data) == false) {
+        Alert.render('Value not in tree')
+        return;
+    }
     this.root = this.root.deleteNode(data);
 }
 
