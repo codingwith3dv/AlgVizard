@@ -31,7 +31,7 @@ ArrayStack.prototype.push = async function(value) {
 }
 
 ArrayStack.prototype.pop = async function() {
-    if (this.counter == -1) Alert.render('Nothing to pop')return 0;
+    if (this.counter == -1) Alert.render('Nothing to pop'); return 0;
     var res = this.array[this.counter--];
 
     var nodeToDelete = container.firstChild;
