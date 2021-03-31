@@ -1,7 +1,7 @@
 var linkedlist = new LinkedList();
 
 //linkedlist.add(0, 1)
-
+linkedlist.addNode(10)
 function openTab(evt, name) {
     var i, tabcontent, tablinks;
 
