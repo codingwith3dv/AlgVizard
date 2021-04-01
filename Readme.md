@@ -4,7 +4,7 @@ people to understand algorithms by visualizing them.
 
 This website is made for the theme `Visualization` in Tech With Tim Code jam hosted at 2021 March
 
-[Vote for me](https://twtcodejam.net/timathon/team/654/)
+[Vote for me](https://twtcodejam.net/timathon/vote/654/)
 
 ## Features
 It can give you a basic understanding of algorithms
